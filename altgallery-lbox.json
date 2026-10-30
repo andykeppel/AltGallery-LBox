@@ -874,19 +874,19 @@
       "tintColor": "#8844F6",
       "versions": [
         {
-          "version": "1.0.5",
-          "date": "2026-10-29",
-          "localizedDescription": "MoviePilot iOS 1.0.5，修复系统明暗切换后顶部导航栏渐变未更新的问题。支持 iOS 17+，iOS 26+ 使用系统 Liquid Glass。\n\n### 更新内容\n\n- 修复关闭业务弹窗后，系统切换明暗主题时顶部导航栏模糊渐变仍保留旧底色的问题，覆盖前台切换和后台恢复。\n- 原生更多目录同步使用动态主题底色，保留手动选择明暗主题的优先级及业务弹窗的透明材质。\n\n### 安装\n\n下载 `MoviePilot-1.0.5-unsigned.ipa`，使用自己的 Apple 账户通过 SideStore、AltStore Classic 或 Sideloadly 重签后覆盖安装。小组件需要同时重签扩展并保留共享组。免费签名通常 7 天有效。\n\n建议同步更新至 MoviePilot-Frontend **3.2.1** 或更新的兼容前端，前端页面修复在实例资源同步后生效。\n\n[安装与续签](https://github.com/jxxghp/MoviePilot-App/blob/main/guides/install.md) · [小组件](https://github.com/jxxghp/MoviePilot-App/blob/main/guides/widgets.md) · [通知配置](https://github.com/jxxghp/MoviePilot-App/blob/main/guides/notifications.md)\n\nRelease 同时提供 `SHA256SUMS`。本包使用 iPhoneOS SDK 和 arm64 架构构建；iPhone 完整系统集成验收仍在进行。\n\n构建源码：[8465e11cd1f13929e130e362377291d62e7539f1](https://github.com/jxxghp/MoviePilot-App/commit/8465e11cd1f13929e130e362377291d62e7539f1)。",
-          "downloadURL": "https://github.com/jxxghp/MoviePilot-App/releases/download/v1.0.5/MoviePilot-1.0.5-unsigned.ipa",
-          "size": 4150238,
+          "version": "1.0.6",
+          "date": "2026-10-30",
+          "localizedDescription": "MoviePilot iOS 1.0.6，修复媒体卡片选站搜索时的导航中断。支持 iOS 17+，iOS 26+ 使用系统 Liquid Glass。\n\n### 更新内容\n\n- 修复媒体卡片选择站点并搜索后，业务弹窗归还期间切换入口导致导航连接中断、进入“暂时无法打开 MoviePilot”页面的问题。\n\n### 安装\n\n下载 `MoviePilot-1.0.6-unsigned.ipa`，使用自己的 Apple 账户通过 SideStore、AltStore Classic 或 Sideloadly 重签后覆盖安装。小组件需要同时重签扩展并保留共享组。免费签名通常 7 天有效。\n\n建议同步更新至 MoviePilot-Frontend **3.2.2** 或更新的兼容前端，前端页面修复在实例资源同步后生效。\n\n[安装与续签](https://github.com/jxxghp/MoviePilot-App/blob/main/guides/install.md) · [小组件](https://github.com/jxxghp/MoviePilot-App/blob/main/guides/widgets.md) · [通知配置](https://github.com/jxxghp/MoviePilot-App/blob/main/guides/notifications.md)\n\nRelease 同时提供 `SHA256SUMS`。本包使用 iPhoneOS SDK 和 arm64 架构构建；iPhone 完整系统集成验收仍在进行。\n\n构建源码：[47981824f15632ee75a91c7862aa290e8c90f288](https://github.com/jxxghp/MoviePilot-App/commit/47981824f15632ee75a91c7862aa290e8c90f288)。",
+          "downloadURL": "https://github.com/jxxghp/MoviePilot-App/releases/download/v1.0.6/MoviePilot-1.0.6-unsigned.ipa",
+          "size": 4150199,
           "minOSVersion": "17.0"
         }
       ],
-      "version": "1.0.5",
-      "versionDate": "2026-10-29",
-      "downloadURL": "https://github.com/jxxghp/MoviePilot-App/releases/download/v1.0.5/MoviePilot-1.0.5-unsigned.ipa",
-      "size": 4150238,
-      "versionDescription": "MoviePilot iOS 1.0.5，修复系统明暗切换后顶部导航栏渐变未更新的问题。支持 iOS 17+，iOS 26+ 使用系统 Liquid Glass。\n\n### 更新内容\n\n- 修复关闭业务弹窗后，系统切换明暗主题时顶部导航栏模糊渐变仍保留旧底色的问题，覆盖前台切换和后台恢复。\n- 原生更多目录同步使用动态主题底色，保留手动选择明暗主题的优先级及业务弹窗的透明材质。\n\n### 安装\n\n下载 `MoviePilot-1.0.5-unsigned.ipa`，使用自己的 Apple 账户通过 SideStore、AltStore Classic 或 Sideloadly 重签后覆盖安装。小组件需要同时重签扩展并保留共享组。免费签名通常 7 天有效。\n\n建议同步更新至 MoviePilot-Frontend **3.2.1** 或更新的兼容前端，前端页面修复在实例资源同步后生效。\n\n[安装与续签](https://github.com/jxxghp/MoviePilot-App/blob/main/guides/install.md) · [小组件](https://github.com/jxxghp/MoviePilot-App/blob/main/guides/widgets.md) · [通知配置](https://github.com/jxxghp/MoviePilot-App/blob/main/guides/notifications.md)\n\nRelease 同时提供 `SHA256SUMS`。本包使用 iPhoneOS SDK 和 arm64 架构构建；iPhone 完整系统集成验收仍在进行。\n\n构建源码：[8465e11cd1f13929e130e362377291d62e7539f1](https://github.com/jxxghp/MoviePilot-App/commit/8465e11cd1f13929e130e362377291d62e7539f1)。",
+      "version": "1.0.6",
+      "versionDate": "2026-10-30",
+      "downloadURL": "https://github.com/jxxghp/MoviePilot-App/releases/download/v1.0.6/MoviePilot-1.0.6-unsigned.ipa",
+      "size": 4150199,
+      "versionDescription": "MoviePilot iOS 1.0.6，修复媒体卡片选站搜索时的导航中断。支持 iOS 17+，iOS 26+ 使用系统 Liquid Glass。\n\n### 更新内容\n\n- 修复媒体卡片选择站点并搜索后，业务弹窗归还期间切换入口导致导航连接中断、进入“暂时无法打开 MoviePilot”页面的问题。\n\n### 安装\n\n下载 `MoviePilot-1.0.6-unsigned.ipa`，使用自己的 Apple 账户通过 SideStore、AltStore Classic 或 Sideloadly 重签后覆盖安装。小组件需要同时重签扩展并保留共享组。免费签名通常 7 天有效。\n\n建议同步更新至 MoviePilot-Frontend **3.2.2** 或更新的兼容前端，前端页面修复在实例资源同步后生效。\n\n[安装与续签](https://github.com/jxxghp/MoviePilot-App/blob/main/guides/install.md) · [小组件](https://github.com/jxxghp/MoviePilot-App/blob/main/guides/widgets.md) · [通知配置](https://github.com/jxxghp/MoviePilot-App/blob/main/guides/notifications.md)\n\nRelease 同时提供 `SHA256SUMS`。本包使用 iPhoneOS SDK 和 arm64 架构构建；iPhone 完整系统集成验收仍在进行。\n\n构建源码：[47981824f15632ee75a91c7862aa290e8c90f288](https://github.com/jxxghp/MoviePilot-App/commit/47981824f15632ee75a91c7862aa290e8c90f288)。",
       "minOSVersion": "17.0"
     },
     {
@@ -1008,6 +1008,34 @@
       "size": 6685919,
       "versionDescription": "**New**\n\n- Hold anywhere on the video to seek ([#116](https://github.com/verback2308/Opaline/issues/116)). Press and hold on the picture, then drag sideways. The seek bar follows your finger and the video jumps where you let go, so you no longer have to hit the thin bar at the bottom. The taps you already know still work: the sides seek, the middle pauses.\n- Search inside a channel ([#117](https://github.com/verback2308/Opaline/issues/117)). Channel pages have a magnifier now, and whatever you type there searches that channel only. YouTube serves no filters for this kind of search, so there are none in the app either.\n- Get a downloaded video out of the app ([#115](https://github.com/verback2308/Opaline/issues/115)). The menu on a downloaded video has a new \"Save to Files\" row that hands the file to the usual iOS share sheet, so it can go to Files, Photos, AirDrop or another app. It is named after the video, and only the video leaves: subtitles, comments and the saved page stay where they were.\n- Clear the whole search history at once ([#121](https://github.com/verback2308/Opaline/issues/121)). The last row under Recent searches wipes the list, and it asks first.\n\n**Fixes**\n\n- The mini player no longer sits on top of the tab bar ([#118](https://github.com/verback2308/Opaline/issues/118)). Tapping a tab behind the collapsed player switches to that tab instead of reopening the video.\n- Stereo no longer gets spatialized on AirPods ([#119](https://github.com/verback2308/Opaline/issues/119)). Ordinary two-channel sound was being turned into a fake surround field that moved when you turned your head. Video that really is multichannel still spatializes.\n- The \"...\" menu stops closing on its own ([#128](https://github.com/verback2308/Opaline/issues/128)). It was reacting to the device being tilted or put down, which made it look random when you held the phone in your hand.\n\n**Also**\n\n- If your device is older than Opaline supports, the README now points at [a downport for iOS 9](https://github.com/Joeviocoe/Opaline) by another developer, which runs on the iPad 2, iPad 3, iPad mini and iPhone 4S ([#125](https://github.com/verback2308/Opaline/issues/125)).",
       "minOSVersion": "12.0"
+    },
+    {
+      "name": "OpenParsec",
+      "bundleIdentifier": "com.aigch.OpenParsec",
+      "developerName": "hugeBlack",
+      "subtitle": "Open Parsec client for iOS/iPadOS",
+      "localizedDescription": "An open-source Parsec client for iOS/iPadOS with mouse, keyboard, and touch-screen support.",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/OpenParsec/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/OpenParsec/images/login.png"
+      ],
+      "tintColor": "#BB01F0",
+      "versions": [
+        {
+          "version": "1.4.0",
+          "date": "2026-10-08",
+          "localizedDescription": "Welcome! This is the first versioned release of everything thats been on our nightly since 1.3.0 in may, future releases will be tagged and published this way going forward:\r\n\r\nstreaming\r\n- pauses in the background instead of disconnecting, and reconnects on its own after a drop or a lock (#66, #80, #109)\r\n- pip recovers when its display layer fails, thanks @alantangok (#108)\r\n- audio buffer and race fixes, memcpy clamp from #70 thanks @2extndd (#85, #110)\r\n- connecting no longer kills music thats playing, it mixes instead, plus a status overlay (#86)\r\n\r\ninput\r\n- touchpad style cursor and crisp zoom, thanks @rebelancap (#78)\r\n- zoom viewport stays above the keyboard, thanks @alantangok (#107)\r\n- direct mode and keyboard fixes (#81, #87)\r\n- external pointer fixes and left alt no longer sent as win, thanks @jobsgonnawork (#91)\r\n- option key as command setting (#94)\r\n\r\napp\r\n- login fixes, saved login readable after first unlock (#89, #111)\r\n- fixes from live testing: screen stays awake while streaming, says when the session expired or the host didnt approve, names the host its reconnecting to, cursor and zoom fixes (#105)\r\n- reconnect memory leak and version string fixes from #70, thanks @2extndd (#84)\r\n- error reporting and logging (#77, #90)\r\n- safety fixes and cleanups (#82, #83)\r\n- every nightly has its own build number now so altstore shows it as an update (#112, #95 )\r\n\r\nExpect a 2.0 release in the coming weeks with lots more improvements! Thank you for your support!\r\n\r\n\r\n---\r\n\r\n# Generated by GitHub\r\n\r\n## What's Changed\r\n* Significantly optimized the sound latency performance by @xiaoxuhuanxiang in https://github.com/hugeBlack/OpenParsec/pull/3\r\n* Create altstore.json by @Somiona in https://github.com/hugeBlack/OpenParsec/pull/15\r\n* Fix AltStore .json by @yodaluca23 in https://github.com/hugeBlack/OpenParsec/pull/20\r\n* ci: upgrade deprecated upload artifact action by @underw8 in https://github.com/hugeBlack/OpenParsec/pull/26\r\n* New Features with General UI and Performance Improvements by @danieltarazona in https://github.com/hugeBlack/OpenParsec/pull/41\r\n* Fix fullwidth Unicode characters not passing through virtual keyboard by @Add1ct1ve in https://github.com/hugeBlack/OpenParsec/pull/49\r\n* Move zoom reset on rotate by @studiobloom in https://github.com/hugeBlack/OpenParsec/pull/55\r\n* Implement #58 by @studiobloom in https://github.com/hugeBlack/OpenParsec/pull/60\r\n* Added Picture in Picture by @naive17 in https://github.com/hugeBlack/OpenParsec/pull/62\r\n* fix crash sites and cleanup by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/63\r\n* keyboard remap and key repeat for hardware keyboards by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/64\r\n* reduce battery drain by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/65\r\n* 少映射了幾個全形字符 by @TwhomeGH in https://github.com/hugeBlack/OpenParsec/pull/68\r\n* Touchpad-style cursor control and crisp zoom by @rebelancap in https://github.com/hugeBlack/OpenParsec/pull/78\r\n* pause on background instead of disconnecting by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/66\r\n* Auto reconnect and stuck input fix by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/80\r\n* Direct mode fix by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/81\r\n* small cleanups by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/82\r\n* log sdk binary version and stream status by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/77\r\n* Safety fixes by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/83\r\n* taking fixes from #70 by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/84\r\n* Audio buffer fixes by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/85\r\n* Session status and audio session exclusivity by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/86\r\n* Keyboard fixes by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/87\r\n* Lifecycle and login fixes by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/89\r\n* Error reporting and logging by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/90\r\n* Fix external pointer regressions and Left Alt sent as Win (#88) by @jobsgonnawork in https://github.com/hugeBlack/OpenParsec/pull/91\r\n* Option key as command setting by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/94\r\n* Live test fixes, QUALITY PR! by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/105\r\n* keep zoom viewport above keyboard by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/107\r\n* pip recovery by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/108\r\n* reconnect fixes by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/109\r\n* fix race audio ring buffer by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/110\r\n* Login fixes by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/111\r\n* nightly build number and 1.4.0 by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/112\r\n\r\n## New Contributors\r\n* @xiaoxuhuanxiang made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/3\r\n* @Somiona made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/15\r\n* @yodaluca23 made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/20\r\n* @underw8 made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/26\r\n* @danieltarazona made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/41\r\n* @Add1ct1ve made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/49\r\n* @studiobloom made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/55\r\n* @naive17 made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/62\r\n* @SandiyosDev made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/63\r\n* @TwhomeGH made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/68\r\n* @rebelancap made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/78\r\n* @jobsgonnawork made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/91\r\n\r\n**Full Changelog**: https://github.com/hugeBlack/OpenParsec/commits/1.4.0",
+          "downloadURL": "https://github.com/hugeBlack/OpenParsec/releases/download/1.4.0/OpenParsec.ipa",
+          "size": 4358332,
+          "minOSVersion": "14.0"
+        }
+      ],
+      "version": "1.4.0",
+      "versionDate": "2026-10-08",
+      "downloadURL": "https://github.com/hugeBlack/OpenParsec/releases/download/1.4.0/OpenParsec.ipa",
+      "size": 4358332,
+      "versionDescription": "Welcome! This is the first versioned release of everything thats been on our nightly since 1.3.0 in may, future releases will be tagged and published this way going forward:\r\n\r\nstreaming\r\n- pauses in the background instead of disconnecting, and reconnects on its own after a drop or a lock (#66, #80, #109)\r\n- pip recovers when its display layer fails, thanks @alantangok (#108)\r\n- audio buffer and race fixes, memcpy clamp from #70 thanks @2extndd (#85, #110)\r\n- connecting no longer kills music thats playing, it mixes instead, plus a status overlay (#86)\r\n\r\ninput\r\n- touchpad style cursor and crisp zoom, thanks @rebelancap (#78)\r\n- zoom viewport stays above the keyboard, thanks @alantangok (#107)\r\n- direct mode and keyboard fixes (#81, #87)\r\n- external pointer fixes and left alt no longer sent as win, thanks @jobsgonnawork (#91)\r\n- option key as command setting (#94)\r\n\r\napp\r\n- login fixes, saved login readable after first unlock (#89, #111)\r\n- fixes from live testing: screen stays awake while streaming, says when the session expired or the host didnt approve, names the host its reconnecting to, cursor and zoom fixes (#105)\r\n- reconnect memory leak and version string fixes from #70, thanks @2extndd (#84)\r\n- error reporting and logging (#77, #90)\r\n- safety fixes and cleanups (#82, #83)\r\n- every nightly has its own build number now so altstore shows it as an update (#112, #95 )\r\n\r\nExpect a 2.0 release in the coming weeks with lots more improvements! Thank you for your support!\r\n\r\n\r\n---\r\n\r\n# Generated by GitHub\r\n\r\n## What's Changed\r\n* Significantly optimized the sound latency performance by @xiaoxuhuanxiang in https://github.com/hugeBlack/OpenParsec/pull/3\r\n* Create altstore.json by @Somiona in https://github.com/hugeBlack/OpenParsec/pull/15\r\n* Fix AltStore .json by @yodaluca23 in https://github.com/hugeBlack/OpenParsec/pull/20\r\n* ci: upgrade deprecated upload artifact action by @underw8 in https://github.com/hugeBlack/OpenParsec/pull/26\r\n* New Features with General UI and Performance Improvements by @danieltarazona in https://github.com/hugeBlack/OpenParsec/pull/41\r\n* Fix fullwidth Unicode characters not passing through virtual keyboard by @Add1ct1ve in https://github.com/hugeBlack/OpenParsec/pull/49\r\n* Move zoom reset on rotate by @studiobloom in https://github.com/hugeBlack/OpenParsec/pull/55\r\n* Implement #58 by @studiobloom in https://github.com/hugeBlack/OpenParsec/pull/60\r\n* Added Picture in Picture by @naive17 in https://github.com/hugeBlack/OpenParsec/pull/62\r\n* fix crash sites and cleanup by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/63\r\n* keyboard remap and key repeat for hardware keyboards by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/64\r\n* reduce battery drain by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/65\r\n* 少映射了幾個全形字符 by @TwhomeGH in https://github.com/hugeBlack/OpenParsec/pull/68\r\n* Touchpad-style cursor control and crisp zoom by @rebelancap in https://github.com/hugeBlack/OpenParsec/pull/78\r\n* pause on background instead of disconnecting by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/66\r\n* Auto reconnect and stuck input fix by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/80\r\n* Direct mode fix by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/81\r\n* small cleanups by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/82\r\n* log sdk binary version and stream status by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/77\r\n* Safety fixes by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/83\r\n* taking fixes from #70 by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/84\r\n* Audio buffer fixes by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/85\r\n* Session status and audio session exclusivity by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/86\r\n* Keyboard fixes by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/87\r\n* Lifecycle and login fixes by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/89\r\n* Error reporting and logging by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/90\r\n* Fix external pointer regressions and Left Alt sent as Win (#88) by @jobsgonnawork in https://github.com/hugeBlack/OpenParsec/pull/91\r\n* Option key as command setting by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/94\r\n* Live test fixes, QUALITY PR! by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/105\r\n* keep zoom viewport above keyboard by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/107\r\n* pip recovery by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/108\r\n* reconnect fixes by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/109\r\n* fix race audio ring buffer by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/110\r\n* Login fixes by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/111\r\n* nightly build number and 1.4.0 by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/112\r\n\r\n## New Contributors\r\n* @xiaoxuhuanxiang made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/3\r\n* @Somiona made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/15\r\n* @yodaluca23 made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/20\r\n* @underw8 made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/26\r\n* @danieltarazona made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/41\r\n* @Add1ct1ve made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/49\r\n* @studiobloom made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/55\r\n* @naive17 made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/62\r\n* @SandiyosDev made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/63\r\n* @TwhomeGH made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/68\r\n* @rebelancap made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/78\r\n* @jobsgonnawork made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/91\r\n\r\n**Full Changelog**: https://github.com/hugeBlack/OpenParsec/commits/1.4.0",
+      "minOSVersion": "14.0"
     },
     {
       "name": "Orchard",
@@ -1249,6 +1277,37 @@
       "minOSVersion": "27.0"
     },
     {
+      "name": "Rush Hours",
+      "bundleIdentifier": "com.rushhours.app",
+      "developerName": "ekomlenovic",
+      "subtitle": "Slide the cars, free the red one.",
+      "localizedDescription": "A free sliding-block traffic puzzle: slide the cars and trucks along their lanes to drive the red car out. 700+ campaign levels, daily and weekly challenges, a level creator and optional self-hosted multiplayer — no ads, no in-app purchases, no tracking.",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/RushHours/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/RushHours/images/gameplay.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/RushHours/images/map.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/RushHours/images/daily.png",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/RushHours/images/creator.png"
+      ],
+      "tintColor": "#E5A019",
+      "versions": [
+        {
+          "version": "2.0.7",
+          "date": "2026-10-28",
+          "localizedDescription": "## Release v2.0.7\n\nMulti-platform build from `4dab1d356e079c3c4f5a76853cfa92320d6a8598`.\n\n### iOS (IPA Non-Signé)\nÀ installer via SideStore / AltStore.\n\n### Android (APK)\nInstallation directe.\n\n### Checksums\n\n| Fichier | MD5 | SHA-256 |\n|---|---|---|\n| `rush-hours-unsigned.ipa` | `aab1c16b178c712d1531acb3fb51b9d7` | `379529c258e16cb94fca118569db9599bbbb698ba4f625f628a66260bbbe6098` |",
+          "downloadURL": "https://github.com/ekomlenovic/rush_hour_ios_android/releases/download/v2.0.7-b65/rush-hours-unsigned.ipa",
+          "size": 18865769,
+          "minOSVersion": "16.4"
+        }
+      ],
+      "version": "2.0.7",
+      "versionDate": "2026-10-28",
+      "downloadURL": "https://github.com/ekomlenovic/rush_hour_ios_android/releases/download/v2.0.7-b65/rush-hours-unsigned.ipa",
+      "size": 18865769,
+      "versionDescription": "## Release v2.0.7\n\nMulti-platform build from `4dab1d356e079c3c4f5a76853cfa92320d6a8598`.\n\n### iOS (IPA Non-Signé)\nÀ installer via SideStore / AltStore.\n\n### Android (APK)\nInstallation directe.\n\n### Checksums\n\n| Fichier | MD5 | SHA-256 |\n|---|---|---|\n| `rush-hours-unsigned.ipa` | `aab1c16b178c712d1531acb3fb51b9d7` | `379529c258e16cb94fca118569db9599bbbb698ba4f625f628a66260bbbe6098` |",
+      "minOSVersion": "16.4"
+    },
+    {
       "name": "SceneBox",
       "bundleIdentifier": "app.scenebox.SceneBox",
       "developerName": "donbytyqi",
@@ -1352,19 +1411,19 @@
       "tintColor": "#7c7bff",
       "versions": [
         {
-          "version": "1.6.2",
-          "date": "2026-10-28",
-          "localizedDescription": "A manga and webtoon reader for your [Suwayomi](https://suwayomi.org/) server.\n\n### 🚀 Improvements\n\n- Added back the chapter grid view on the series page, saved per series (@aaronbamblett)\n- Added the reason and a **Cancel** option to failed downloads (@aaronbamblett)\n- Renamed the macOS download to `…-macos-universal.zip` to make clear it runs natively on Apple Silicon and Intel (@aaronbamblett)\n\n### 🧩 Fixes\n\n- Fixed one failing chapter pausing every download and showing the app as offline on a working connection (@aaronbamblett)\n- Fixed the **Filter** button covering the selection bar when selecting titles in a source (@aaronbamblett)\n- Fixed the **Reset** and **Filter** buttons being cut off in the source filter sheet (@aaronbamblett)\n\n*Thanks to our Weblate translators Andrei Stepanov, Constantin Piber and Kisnov for the Catalan, German and Russian updates.*\n\n## Install\n\nYou'll need a running Suwayomi server. See [Getting started](https://tsumiru.app/docs/guides/getting-started).\n\n### Mobile\n\n**Android:** download the universal APK below and open it to install. Smaller APKs for specific chip types are also attached.\n\n**iOS:** the `…-ios.ipa` below is unsigned and has to be sideloaded. Add `https://tsumiru.app/apps.json` as a source in [SideStore](https://sidestore.io/) or [AltStore](https://altstore.io/) to install it and get later releases as updates.\n\n<details>\n<summary>Which sideloading tool should I use?</summary>\n\n- **[SideStore](https://sidestore.io/)** signs and refreshes the app on the device itself, with no computer needed after setup. Best for most people.\n- **[AltStore](https://altstore.io/)** expires every 7 days and only refreshes while a computer running AltServer is switched on and on the same Wi-Fi as your phone.\n- **[TrollStore](https://ios.cfw.guide/installing-trollstore/)** installs permanently with no expiry, but only works on older iPhones and iOS versions with the required vulnerability.\n\nWith SideStore or AltStore the app is re-signed periodically, which those tools automate. There is no App Store build.\n</details>\n\n### Desktop\n\n**Windows:** download `…-windows-x64.zip`, extract it anywhere, and run `tsumiru.exe`.\n\n**macOS:** download `…-macos-universal.zip`, extract it, and move the app to Applications. If macOS blocks the first launch, approve it under System Settings → Privacy & Security.\n\n**Linux:** the Flatpak is recommended and auto-updates.\n\n```sh\nflatpak remote-add --if-not-exists tsumiru https://flatpak.tsumiru.app/index.flatpakrepo\nflatpak install tsumiru app.tsumiru.Tsumiru\n```\n\nExisting Flatpak installs keep receiving updates under `io.github.aaronbamblett.tsumiru`; no data, settings or logins move. AppImage/deb also keep that ID.\n\nFor a portable option, download `…-linux-x86_64.AppImage`, mark it executable with `chmod +x`, and run it.\n\n### Web\n\nDownload `…-web.zip` and serve its contents with any static web server.\n\n[Full documentation](https://tsumiru.app/)",
-          "downloadURL": "https://github.com/Suwayomi/Suwayomi-Tsumiru/releases/download/v1.6.2/tsumiru-v1.6.2-ios.ipa",
-          "size": 18312147,
+          "version": "1.6.3",
+          "date": "2026-10-30",
+          "localizedDescription": "A manga and webtoon reader for your [Suwayomi](https://suwayomi.org/) server.\n\n### ⚙️ Changes\n\n- Changed the Android signing key, and updates still install without a reinstall (@aaronbamblett)\n- Added a weekly reminder to switch away from Basic Auth, which is deprecated (@aaronbamblett)\n\n### 🚀 Improvements\n\n- Added support for AVIF images on Linux (@aaronbamblett)\n- Made **Custom brightness** in the reader work on desktop and web (@aaronbamblett)\n- Moved the sign-in, **Incognito mode** and **Updating library…** banners beside the sidebar on wide screens, so they no longer push it down (@aaronbamblett)\n- Removed the Flatpak's NetworkManager permission by reading network status from the desktop portal (@aaronbamblett)\n\n### 🧩 Fixes\n\n- Fixed the source toolbar missing the first time you open a source on desktop (@aaronbamblett)\n- Fixed the macOS app crashing while you resize the window (@aaronbamblett)\n- Fixed banners covering the top bar on macOS (@aaronbamblett)\n- Fixed Library showing **No visible categories** and an empty top bar after your session expires (@aaronbamblett)\n- Fixed a fresh install showing **Session expired. Sign in again.** before setup is finished (@aaronbamblett)\n- Fixed empty screens running past the bottom in landscape when a banner and the keyboard are showing (@aaronbamblett)\n- Fixed setup rejecting Basic Auth servers running a current Suwayomi preview (@aaronbamblett)\n\n## Install\n\nYou'll need a running Suwayomi server. See [Getting started](https://tsumiru.app/docs/guides/getting-started).\n\n### Mobile\n\n**Android:** download the universal APK below and open it to install. Smaller APKs for specific chip types are also attached.\n\n**iOS:** the `…-ios.ipa` below is unsigned and has to be sideloaded. Add `https://tsumiru.app/apps.json` as a source in [SideStore](https://sidestore.io/) or [AltStore](https://altstore.io/) to install it and get later releases as updates.\n\n<details>\n<summary>Which sideloading tool should I use?</summary>\n\n- **[SideStore](https://sidestore.io/)** signs and refreshes the app on the device itself, with no computer needed after setup. Best for most people.\n- **[AltStore](https://altstore.io/)** expires every 7 days and only refreshes while a computer running AltServer is switched on and on the same Wi-Fi as your phone.\n- **[TrollStore](https://ios.cfw.guide/installing-trollstore/)** installs permanently with no expiry, but only works on older iPhones and iOS versions with the required vulnerability.\n\nWith SideStore or AltStore the app is re-signed periodically, which those tools automate. There is no App Store build.\n</details>\n\n### Desktop\n\n**Windows:** download `…-windows-x64.zip`, extract it anywhere, and run `tsumiru.exe`.\n\n**macOS:** download `…-macos-universal.zip`, extract it, and move the app to Applications. If macOS blocks the first launch, approve it under System Settings → Privacy & Security.\n\n**Linux:** the Flatpak is recommended and auto-updates.\n\n```sh\nflatpak remote-add --if-not-exists tsumiru https://flatpak.tsumiru.app/index.flatpakrepo\nflatpak install tsumiru app.tsumiru.Tsumiru\n```\n\nExisting Flatpak installs keep receiving updates under `io.github.aaronbamblett.tsumiru`; no data, settings or logins move. AppImage/deb also keep that ID.\n\nFor a portable option, download `…-linux-x86_64.AppImage`, mark it executable with `chmod +x`, and run it.\n\n### Web\n\nDownload `…-web.zip` and serve its contents with any static web server.\n\n[Full documentation](https://tsumiru.app/)",
+          "downloadURL": "https://github.com/Suwayomi/Suwayomi-Tsumiru/releases/download/v1.6.3/tsumiru-v1.6.3-ios.ipa",
+          "size": 18404468,
           "minOSVersion": "14.0"
         }
       ],
-      "version": "1.6.2",
-      "versionDate": "2026-10-28",
-      "downloadURL": "https://github.com/Suwayomi/Suwayomi-Tsumiru/releases/download/v1.6.2/tsumiru-v1.6.2-ios.ipa",
-      "size": 18312147,
-      "versionDescription": "A manga and webtoon reader for your [Suwayomi](https://suwayomi.org/) server.\n\n### 🚀 Improvements\n\n- Added back the chapter grid view on the series page, saved per series (@aaronbamblett)\n- Added the reason and a **Cancel** option to failed downloads (@aaronbamblett)\n- Renamed the macOS download to `…-macos-universal.zip` to make clear it runs natively on Apple Silicon and Intel (@aaronbamblett)\n\n### 🧩 Fixes\n\n- Fixed one failing chapter pausing every download and showing the app as offline on a working connection (@aaronbamblett)\n- Fixed the **Filter** button covering the selection bar when selecting titles in a source (@aaronbamblett)\n- Fixed the **Reset** and **Filter** buttons being cut off in the source filter sheet (@aaronbamblett)\n\n*Thanks to our Weblate translators Andrei Stepanov, Constantin Piber and Kisnov for the Catalan, German and Russian updates.*\n\n## Install\n\nYou'll need a running Suwayomi server. See [Getting started](https://tsumiru.app/docs/guides/getting-started).\n\n### Mobile\n\n**Android:** download the universal APK below and open it to install. Smaller APKs for specific chip types are also attached.\n\n**iOS:** the `…-ios.ipa` below is unsigned and has to be sideloaded. Add `https://tsumiru.app/apps.json` as a source in [SideStore](https://sidestore.io/) or [AltStore](https://altstore.io/) to install it and get later releases as updates.\n\n<details>\n<summary>Which sideloading tool should I use?</summary>\n\n- **[SideStore](https://sidestore.io/)** signs and refreshes the app on the device itself, with no computer needed after setup. Best for most people.\n- **[AltStore](https://altstore.io/)** expires every 7 days and only refreshes while a computer running AltServer is switched on and on the same Wi-Fi as your phone.\n- **[TrollStore](https://ios.cfw.guide/installing-trollstore/)** installs permanently with no expiry, but only works on older iPhones and iOS versions with the required vulnerability.\n\nWith SideStore or AltStore the app is re-signed periodically, which those tools automate. There is no App Store build.\n</details>\n\n### Desktop\n\n**Windows:** download `…-windows-x64.zip`, extract it anywhere, and run `tsumiru.exe`.\n\n**macOS:** download `…-macos-universal.zip`, extract it, and move the app to Applications. If macOS blocks the first launch, approve it under System Settings → Privacy & Security.\n\n**Linux:** the Flatpak is recommended and auto-updates.\n\n```sh\nflatpak remote-add --if-not-exists tsumiru https://flatpak.tsumiru.app/index.flatpakrepo\nflatpak install tsumiru app.tsumiru.Tsumiru\n```\n\nExisting Flatpak installs keep receiving updates under `io.github.aaronbamblett.tsumiru`; no data, settings or logins move. AppImage/deb also keep that ID.\n\nFor a portable option, download `…-linux-x86_64.AppImage`, mark it executable with `chmod +x`, and run it.\n\n### Web\n\nDownload `…-web.zip` and serve its contents with any static web server.\n\n[Full documentation](https://tsumiru.app/)",
+      "version": "1.6.3",
+      "versionDate": "2026-10-30",
+      "downloadURL": "https://github.com/Suwayomi/Suwayomi-Tsumiru/releases/download/v1.6.3/tsumiru-v1.6.3-ios.ipa",
+      "size": 18404468,
+      "versionDescription": "A manga and webtoon reader for your [Suwayomi](https://suwayomi.org/) server.\n\n### ⚙️ Changes\n\n- Changed the Android signing key, and updates still install without a reinstall (@aaronbamblett)\n- Added a weekly reminder to switch away from Basic Auth, which is deprecated (@aaronbamblett)\n\n### 🚀 Improvements\n\n- Added support for AVIF images on Linux (@aaronbamblett)\n- Made **Custom brightness** in the reader work on desktop and web (@aaronbamblett)\n- Moved the sign-in, **Incognito mode** and **Updating library…** banners beside the sidebar on wide screens, so they no longer push it down (@aaronbamblett)\n- Removed the Flatpak's NetworkManager permission by reading network status from the desktop portal (@aaronbamblett)\n\n### 🧩 Fixes\n\n- Fixed the source toolbar missing the first time you open a source on desktop (@aaronbamblett)\n- Fixed the macOS app crashing while you resize the window (@aaronbamblett)\n- Fixed banners covering the top bar on macOS (@aaronbamblett)\n- Fixed Library showing **No visible categories** and an empty top bar after your session expires (@aaronbamblett)\n- Fixed a fresh install showing **Session expired. Sign in again.** before setup is finished (@aaronbamblett)\n- Fixed empty screens running past the bottom in landscape when a banner and the keyboard are showing (@aaronbamblett)\n- Fixed setup rejecting Basic Auth servers running a current Suwayomi preview (@aaronbamblett)\n\n## Install\n\nYou'll need a running Suwayomi server. See [Getting started](https://tsumiru.app/docs/guides/getting-started).\n\n### Mobile\n\n**Android:** download the universal APK below and open it to install. Smaller APKs for specific chip types are also attached.\n\n**iOS:** the `…-ios.ipa` below is unsigned and has to be sideloaded. Add `https://tsumiru.app/apps.json` as a source in [SideStore](https://sidestore.io/) or [AltStore](https://altstore.io/) to install it and get later releases as updates.\n\n<details>\n<summary>Which sideloading tool should I use?</summary>\n\n- **[SideStore](https://sidestore.io/)** signs and refreshes the app on the device itself, with no computer needed after setup. Best for most people.\n- **[AltStore](https://altstore.io/)** expires every 7 days and only refreshes while a computer running AltServer is switched on and on the same Wi-Fi as your phone.\n- **[TrollStore](https://ios.cfw.guide/installing-trollstore/)** installs permanently with no expiry, but only works on older iPhones and iOS versions with the required vulnerability.\n\nWith SideStore or AltStore the app is re-signed periodically, which those tools automate. There is no App Store build.\n</details>\n\n### Desktop\n\n**Windows:** download `…-windows-x64.zip`, extract it anywhere, and run `tsumiru.exe`.\n\n**macOS:** download `…-macos-universal.zip`, extract it, and move the app to Applications. If macOS blocks the first launch, approve it under System Settings → Privacy & Security.\n\n**Linux:** the Flatpak is recommended and auto-updates.\n\n```sh\nflatpak remote-add --if-not-exists tsumiru https://flatpak.tsumiru.app/index.flatpakrepo\nflatpak install tsumiru app.tsumiru.Tsumiru\n```\n\nExisting Flatpak installs keep receiving updates under `io.github.aaronbamblett.tsumiru`; no data, settings or logins move. AppImage/deb also keep that ID.\n\nFor a portable option, download `…-linux-x86_64.AppImage`, mark it executable with `chmod +x`, and run it.\n\n### Web\n\nDownload `…-web.zip` and serve its contents with any static web server.\n\n[Full documentation](https://tsumiru.app/)",
       "minOSVersion": "14.0"
     },
     {
@@ -1475,23 +1534,56 @@
       "tintColor": "#0084ff",
       "versions": [
         {
-          "version": "0.9.5",
-          "date": "2026-10-24",
-          "localizedDescription": "* fix: register zhihu URL scheme on iOS by @huamurui in https://github.com/huamurui/zhihu-minus-minus/pull/146\r\n* fix: 修复启动与游客阅读，调整内容过滤默认值 by @huamurui in https://github.com/huamurui/zhihu-minus-minus/pull/145\r\n\r\n\r\n**Full Changelog**: https://github.com/huamurui/zhihu-minus-minus/compare/v0.9.4...v0.9.5",
-          "downloadURL": "https://github.com/huamurui/zhihu-minus-minus/releases/download/v0.9.5/zhihu-minus-minus-v0.9.5-unsigned.ipa",
-          "size": 14460451,
+          "version": "0.9.7",
+          "date": "2026-10-30",
+          "localizedDescription": "修 0.9.6 的问题\r\n- ios 侧滑返回\r\n- 安卓过渡动画补充\r\n\r\n**Full Changelog**: https://github.com/huamurui/zhihu-minus-minus/compare/v0.9.6...v0.9.7",
+          "downloadURL": "https://github.com/huamurui/zhihu-minus-minus/releases/download/v0.9.7/zhihu-minus-minus-v0.9.7-unsigned.ipa",
+          "size": 14488327,
           "minOSVersion": "15.1"
         }
       ],
-      "version": "0.9.5",
-      "versionDate": "2026-10-24",
-      "downloadURL": "https://github.com/huamurui/zhihu-minus-minus/releases/download/v0.9.5/zhihu-minus-minus-v0.9.5-unsigned.ipa",
-      "size": 14460451,
-      "versionDescription": "* fix: register zhihu URL scheme on iOS by @huamurui in https://github.com/huamurui/zhihu-minus-minus/pull/146\r\n* fix: 修复启动与游客阅读，调整内容过滤默认值 by @huamurui in https://github.com/huamurui/zhihu-minus-minus/pull/145\r\n\r\n\r\n**Full Changelog**: https://github.com/huamurui/zhihu-minus-minus/compare/v0.9.4...v0.9.5",
+      "version": "0.9.7",
+      "versionDate": "2026-10-30",
+      "downloadURL": "https://github.com/huamurui/zhihu-minus-minus/releases/download/v0.9.7/zhihu-minus-minus-v0.9.7-unsigned.ipa",
+      "size": 14488327,
+      "versionDescription": "修 0.9.6 的问题\r\n- ios 侧滑返回\r\n- 安卓过渡动画补充\r\n\r\n**Full Changelog**: https://github.com/huamurui/zhihu-minus-minus/compare/v0.9.6...v0.9.7",
       "minOSVersion": "15.1"
     }
   ],
   "news": [
+    {
+      "appID": "com.huamu013.ZhihuMinusMinus",
+      "title": "ZhihuMinusMinus 0.9.7 · 30 Oct 2026",
+      "identifier": "ZhihuMinusMinus-release-v0.9.7",
+      "caption": "ZhihuMinusMinus 0.9.7 is available.",
+      "date": "2026-10-30T11:15:40Z",
+      "tintColor": "#0084ff",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ZhihuMinusMinus/images/news.png",
+      "notify": true,
+      "url": "https://github.com/huamurui/zhihu-minus-minus/releases/tag/v0.9.7"
+    },
+    {
+      "appID": "org.moviepilot.app",
+      "title": "MoviePilot 1.0.6 · 30 Oct 2026",
+      "identifier": "MoviePilot-release-v1.0.6",
+      "caption": "MoviePilot 1.0.6 is available.",
+      "date": "2026-10-30T09:18:23Z",
+      "tintColor": "#8844F6",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MoviePilot-App/images/news.png",
+      "notify": true,
+      "url": "https://github.com/jxxghp/MoviePilot-App/releases/tag/v1.0.6"
+    },
+    {
+      "appID": "com.suwayomi.tachideskSorayomi",
+      "title": "Tsumiru 1.6.3 · 30 Oct 2026",
+      "identifier": "Tsumiru-release-v1.6.3",
+      "caption": "Tsumiru 1.6.3 is available.",
+      "date": "2026-10-30T05:42:54Z",
+      "tintColor": "#7c7bff",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Suwayomi-Tsumiru/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Suwayomi/Suwayomi-Tsumiru/releases/tag/v1.6.3"
+    },
     {
       "appID": "com.altman.moviepilot",
       "title": "MoviePilotLite 1.2.7 · 30 Oct 2026",
@@ -1524,17 +1616,6 @@
       "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Apollo-Reborn/images/news.png",
       "notify": true,
       "url": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/tag/v1.15.11_4.0.1"
-    },
-    {
-      "appID": "org.moviepilot.app",
-      "title": "MoviePilot 1.0.5 · 29 Oct 2026",
-      "identifier": "MoviePilot-release-v1.0.5",
-      "caption": "MoviePilot 1.0.5 is available.",
-      "date": "2026-10-29T23:30:46Z",
-      "tintColor": "#8844F6",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MoviePilot-App/images/news.png",
-      "notify": true,
-      "url": "https://github.com/jxxghp/MoviePilot-App/releases/tag/v1.0.5"
     },
     {
       "appID": "com.armsx2.ios",
@@ -1570,6 +1651,17 @@
       "url": "https://github.com/kuscholar/iDeck/releases/tag/v0.1.3-alpha.4"
     },
     {
+      "appID": "com.rushhours.app",
+      "title": "Rush Hours 2.0.7 · 28 Oct 2026",
+      "identifier": "Rush Hours-release-v2.0.7-b65",
+      "caption": "Rush Hours 2.0.7 is available.",
+      "date": "2026-10-28T23:01:47Z",
+      "tintColor": "#E5A019",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/RushHours/images/news.png",
+      "notify": true,
+      "url": "https://github.com/ekomlenovic/rush_hour_ios_android/releases/tag/v2.0.7-b65"
+    },
+    {
       "appID": "sb.moe.kumone",
       "title": "Kumone 0.3.24 · 28 Oct 2026",
       "identifier": "Kumone-release-v0.3.24",
@@ -1579,17 +1671,6 @@
       "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kumone/images/news.png",
       "notify": true,
       "url": "https://github.com/missuo/kumone/releases/tag/v0.3.24"
-    },
-    {
-      "appID": "com.suwayomi.tachideskSorayomi",
-      "title": "Tsumiru 1.6.2 · 28 Oct 2026",
-      "identifier": "Tsumiru-release-v1.6.2",
-      "caption": "Tsumiru 1.6.2 is available.",
-      "date": "2026-10-28T02:29:20Z",
-      "tintColor": "#7c7bff",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Suwayomi-Tsumiru/images/news.png",
-      "notify": true,
-      "url": "https://github.com/Suwayomi/Suwayomi-Tsumiru/releases/tag/v1.6.2"
     },
     {
       "appID": "com.llayerlinux.LSX4RuntimeProbe",
@@ -1678,17 +1759,6 @@
       "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Venera-Next/images/news.png",
       "notify": true,
       "url": "https://github.com/CyrilPeng/Venera-Next/releases/tag/v1.18.1"
-    },
-    {
-      "appID": "com.huamu013.ZhihuMinusMinus",
-      "title": "ZhihuMinusMinus 0.9.5 · 24 Oct 2026",
-      "identifier": "ZhihuMinusMinus-release-v0.9.5",
-      "caption": "ZhihuMinusMinus 0.9.5 is available.",
-      "date": "2026-10-24T10:00:16Z",
-      "tintColor": "#0084ff",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ZhihuMinusMinus/images/news.png",
-      "notify": true,
-      "url": "https://github.com/huamurui/zhihu-minus-minus/releases/tag/v0.9.5"
     },
     {
       "appID": "org.animeko.animeko",
@@ -1865,6 +1935,17 @@
       "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PureLive/images/news.png",
       "notify": true,
       "url": "https://github.com/liuchuancong/pure_live/releases/tag/v3.1.19"
+    },
+    {
+      "appID": "com.aigch.OpenParsec",
+      "title": "OpenParsec 1.4.0 · 08 Oct 2026",
+      "identifier": "OpenParsec-release-1.4.0",
+      "caption": "OpenParsec 1.4.0 is available.",
+      "date": "2026-10-08T16:07:29Z",
+      "tintColor": "#BB01F0",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/OpenParsec/images/news.png",
+      "notify": true,
+      "url": "https://github.com/hugeBlack/OpenParsec/releases/tag/1.4.0"
     },
     {
       "appID": "dev.playport.app",
