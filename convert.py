@@ -17,10 +17,12 @@ def convert(source):
     result["name"] = "AltGallery · LBox"
     result["identifier"] = "com.andykeppel.altgallery.lbox"
     result["sourceURL"] = OUTPUT_URL
+    converted_apps = []
     for app in result["apps"]:
         versions = app.get("versions")
         if not isinstance(versions, list) or not versions:
-            raise ValueError(f"{app.get('name')}: missing versions")
+            print(f"WARNING: Skipping {app.get('name', '<unnamed>')}: no available versions")
+            continue
         # AltStore sources list the preferred/latest release first; retain that order.
         latest = versions[0]
         for field in ("version", "date", "downloadURL", "size"):
@@ -43,6 +45,11 @@ def convert(source):
             app.pop(legacy, None)
             if original in latest:
                 app[legacy] = latest[original]
+        converted_apps.append(app)
+
+    if not converted_apps:
+        raise ValueError("No apps with available versions; refusing to publish an empty source")
+    result["apps"] = converted_apps
     return result
 
 def main():
