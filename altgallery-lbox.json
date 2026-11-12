@@ -236,19 +236,19 @@
       "tintColor": "#3CAEFF",
       "versions": [
         {
-          "version": "2.6.0-nightly.20261111.0647",
-          "date": "2026-11-11",
-          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- Android: regenerate the PGO profile on the source with the GS runs build\n- tests: the block hasher's unaligned update stays inside the test memory\n- GS: comments that named removed gsrunner switches, and an include they needed\n- GS/Vulkan: the run machine's development log goes\n- GS/TC: the lean path's mode switch and check halves go\n- gsrunner: the burst memo's switches and statistics line go\n- gsrunner: the readback lane's statistics, trace and switches go\n- gsrunner: the kick's two check modes go\n- GS/Vulkan: the run machine sleeps where runs do not form\n- GS: the vertex buffer grows in 64-bit sizes and fails loudly past a ceiling\n- GS: a reset of the draw buffers frees the buffers it replaces\n- GS/SW: a draw whose frame and Z buffers share pages is not split between workers\n- GS/SW: a texture is not refilled while a queued draw still reads it\n- GS/Vulkan: a run that holds a large draw keeps one state for all its draws\n- GS/Vulkan: a draw that cannot open a run is primed before it is classified\n- GS/Vulkan: the stencil counter resolve pipeline takes blend constants and line width dynamic\n- GS/Vulkan: the run pipeline declares its dynamic state through AddCachedDynamicState\n- GS/Vulkan: the stencil counter resolve pipeline takes blend constants and line width dynamic\n- GS/Vulkan: a run opens at the second of two consecutive draws that share its fixed state\n- GS/Vulkan: a draw with a vertex-selector bit runs never take is refused first, with the pixel-shader check\n- gsrunner: -kick-convert-check runs the kick's old conversion pass beside the new one\n- GS: the kick kernel converts a job in stretches, with nothing tested per vertex\n- GS/Vulkan: the stencil counter resolve pipeline keeps blend constants and line width dynamic\n- GS/Vulkan: the run machine's rings are made by the first draw that would join a run\n- GS/Vulkan: a draw that continues a run still counts toward the readback in-pass kick\n- gsrunner: -kick-decide-check runs the kick's wide decision beside the four-wide one\n- GS: the kick kernel decides on raw 16-bit coordinates, both axes in one lane\n- tests: block identities over held depth words are those of the words\n- GS: choose the block identity by timing the candidates once, on the first use\n- GS/HW: keep the palette's hash while the renderer's palette has not been rewritten\n- GS/CLUT: the palette's alpha range with one LD4 per 16 entries on ARM64\n- tests: pin the alpha range of an expanded palette\n- GS/HW: take a level's block identities in one call, and combine them with AES\n- GS/HW: a CPU clear of whole pages gives their blocks the identity of what it wrote\n- GS/HW: key every texture lookup that names nothing by the identities of its blocks\n- GS: GSBlockId, a cheaper identity for a block of local memory inside one run\n- tests: pin the texture hashes that name dumped and replacement textures\n- gsrunner: the run machine keeps -runs on|off and -runs-log; the probing switches go\n- GS/Vulkan: a draw outside the run program's pixel-shader set is refused first, for two masks\n- GS/Vulkan: declining the targets whose runs do not pay (off, unfinished)\n- GS/Vulkan: draws that alternate two sets of constants reuse the earlier upload\n- gsrunner: -runs-nofill-classic, the classic path's no-fill arm (development)\n- GS/Vulkan: the dear split weighs fill against a host draw, per GPU class\n- tests: a hand-worked case of the kick kernel's four-wide decision\n- gsrunner: the readback lane's measurement scaffolding\n- MTGS: a GS-to-EE read spins only while spinning has been answering it\n- MTGS: a GS-to-EE read spins for its answer, and the GS thread for the next read\n- GS/Vulkan: the in-pass kick spends at most a quarter of the readback wait it saves\n- GS/Vulkan: after the gate refuses an in-pass kick, offer it again 32 draws later\n- GS/Vulkan: in a readback frame the kick also ends a pass of many draws\n- GS/HW: the depth target holds the moved words until local memory is read or written there\n- GS/Vulkan: the run log carries each run's bounding-box area by dear class (development)\n- GS/HW: a Z24 move of colour pages into a depth target stays on the GPU\n- GS: a whole-page Z24 move of colour pages lands as a fixed block permutation\n- GS/HW: a burst's second read comes from its first round trip\n- GS/HW: the target reads of one request share one GPU round trip\n- GS/Vulkan: a run flushed from inside an apply keeps the classic path's chosen pipeline\n- GS: a new draw's first vertices are replayed only where a flush check is asked\n- GS: the kernel's conversion pass stands behind its own interface\n- gsrunner: -runs-no-continue, to price the run machine's shortcut (development)\n- GS/Vulkan: the run log records which fixed state ended a run (development)\n- GS/Vulkan: additive draws join runs\n- GS/Vulkan: recorded keys with raster ordering or a stencil counter are loadable\n- GS: the kernel's driver takes the per-draw environment snapshot itself\n- tests: every recorded pipeline key a draw can make is loadable\n- GS: the kick kernel decides a chunk first and converts only the vertices that stay\n- GS/HW: the CPU memory clear's 24-bit and masked fills keep the old bits with one bit select\n- GS: the burst memo uses GSClut's read serial\n- GS/Vulkan: draws without a depth buffer and expanded sprites join runs\n- GS/Vulkan: the run's header and table set takes a descriptor pool of its own\n- GS/Vulkan: a game's recorded pipeline keys survive every build that keeps the key layout\n- GS cache: a key layout identity, hashed from the pipeline selector definitions alone\n- Android: a new install removes only the GPU caches older builds wrote\n- Android: save the shader caches on every trip to the background, not once per 120 s\n- GS cache: write a change a few seconds after it settles, not only every 30 s\n- GS/Vulkan: on Android, name the linked GLSL compiler by its own versions\n- GS/Vulkan: the driver's pipeline blob is stamped by the driver, not the app's build\n- GS/Vulkan: every game's SPIR-V goes into the device's pack as well\n- GS/Vulkan: warm the GLSL compiler on the compile queue when the device opens\n- GS/Vulkan: the recorded-key precompile runs on GSCompileQueue\n- GS: GSCompileQueue, a worker pool for shader and pipeline builds\n- GS cache: a pack makes its directory again when its file is not there\n- tests: a pack is written after its empty directory was removed\n- GS/TC: a target keeps the end block of its valid area\n- GS/HW: the burst memo rests through runs of block copies\n- GS/HW: three values of Draw() are worked out only where they are read\n- GS/HW: the burst memo leaves alone what the copy road cannot take at level 0\n- GS/TC: the post-draw invalidation returns when no source is under the write\n- GS/TC: the target lookup answers from the front of its list\n- GS/HW: the burst memo prefetches what the next packet compare reads\n- GS/HW: the burst memo invalidates the texture cache once per burst\n- GS/HW: the burst memo tests its block-copy gate first\n- gsrunner: the burst memo's vertex counts and slab footprint\n- GS/HW: the burst memo records into recycled slabs\n- GS: the burst memo has no setting\n- gsrunner: -runs-split-mask, and the run log's per-state change counts\n- GS/Vulkan: a draw that opens a run after a ring or texture-array end needs its program built too\n- GS/Vulkan: the run machine's log counts its refusals by detail\n- GS/Vulkan: a draw that continues a run skips the classic path's device work\n- gsrunner: the run machine's development switches\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261108...22b1a7661fa5b29b54fd310911f16841d672bc6d",
-          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20261111/ARMSX2-nightly-20261111-22b1a7661f-iOS-arm64.ipa",
-          "size": 40652510,
+          "version": "2.6.0-nightly.20261112.1132",
+          "date": "2026-11-12",
+          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- IOP thread: hold the lag bound tight for 196,608 cycles after every SIF transfer the EE starts\n- GS/Vulkan: a run's texture set is a fixed array of 32, without a variable descriptor count\n- Android: Auto picks Vulkan on the Bifrost arch 7 parts\n- DriverPacks: offer malisx2 on every Mali of its four arches\n- Android: Auto picks Vulkan on every Mali Valhall v10 part\n- Offer malisx2 on every Mali of arch 7, 9, 10 and 11\n- GPU Drivers pages: name both pack families, pass the session to the setup offer\n- DriverPacks: a malisx2 feed for Mali GPUs on Arm's kbase driver\n- Android: Auto picks Vulkan on the Mali-G610 and G710\n- Android: Vulkan is the default renderer instead of Auto\n- Offer malisx2 on the Mali-G610 and G710 (Valhall v10)\n- GS/Vulkan: VkResultToString names VK_ERROR_FRAGMENTED_POOL and VK_ERROR_OUT_OF_POOL_MEMORY\n- Android: tell a user on Qualcomm's own GPU driver to get a Turnip driver\n- GS/Vulkan: the run machine stops when an empty descriptor pool refuses a set\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261111...c25493a20285dc126a950d2d61826987a566a306",
+          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20261112/ARMSX2-nightly-20261112-c25493a202-iOS-arm64.ipa",
+          "size": 40658081,
           "minOSVersion": "17.0"
         }
       ],
-      "version": "2.6.0-nightly.20261111.0647",
-      "versionDate": "2026-11-11",
-      "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20261111/ARMSX2-nightly-20261111-22b1a7661f-iOS-arm64.ipa",
-      "size": 40652510,
-      "versionDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- Android: regenerate the PGO profile on the source with the GS runs build\n- tests: the block hasher's unaligned update stays inside the test memory\n- GS: comments that named removed gsrunner switches, and an include they needed\n- GS/Vulkan: the run machine's development log goes\n- GS/TC: the lean path's mode switch and check halves go\n- gsrunner: the burst memo's switches and statistics line go\n- gsrunner: the readback lane's statistics, trace and switches go\n- gsrunner: the kick's two check modes go\n- GS/Vulkan: the run machine sleeps where runs do not form\n- GS: the vertex buffer grows in 64-bit sizes and fails loudly past a ceiling\n- GS: a reset of the draw buffers frees the buffers it replaces\n- GS/SW: a draw whose frame and Z buffers share pages is not split between workers\n- GS/SW: a texture is not refilled while a queued draw still reads it\n- GS/Vulkan: a run that holds a large draw keeps one state for all its draws\n- GS/Vulkan: a draw that cannot open a run is primed before it is classified\n- GS/Vulkan: the stencil counter resolve pipeline takes blend constants and line width dynamic\n- GS/Vulkan: the run pipeline declares its dynamic state through AddCachedDynamicState\n- GS/Vulkan: the stencil counter resolve pipeline takes blend constants and line width dynamic\n- GS/Vulkan: a run opens at the second of two consecutive draws that share its fixed state\n- GS/Vulkan: a draw with a vertex-selector bit runs never take is refused first, with the pixel-shader check\n- gsrunner: -kick-convert-check runs the kick's old conversion pass beside the new one\n- GS: the kick kernel converts a job in stretches, with nothing tested per vertex\n- GS/Vulkan: the stencil counter resolve pipeline keeps blend constants and line width dynamic\n- GS/Vulkan: the run machine's rings are made by the first draw that would join a run\n- GS/Vulkan: a draw that continues a run still counts toward the readback in-pass kick\n- gsrunner: -kick-decide-check runs the kick's wide decision beside the four-wide one\n- GS: the kick kernel decides on raw 16-bit coordinates, both axes in one lane\n- tests: block identities over held depth words are those of the words\n- GS: choose the block identity by timing the candidates once, on the first use\n- GS/HW: keep the palette's hash while the renderer's palette has not been rewritten\n- GS/CLUT: the palette's alpha range with one LD4 per 16 entries on ARM64\n- tests: pin the alpha range of an expanded palette\n- GS/HW: take a level's block identities in one call, and combine them with AES\n- GS/HW: a CPU clear of whole pages gives their blocks the identity of what it wrote\n- GS/HW: key every texture lookup that names nothing by the identities of its blocks\n- GS: GSBlockId, a cheaper identity for a block of local memory inside one run\n- tests: pin the texture hashes that name dumped and replacement textures\n- gsrunner: the run machine keeps -runs on|off and -runs-log; the probing switches go\n- GS/Vulkan: a draw outside the run program's pixel-shader set is refused first, for two masks\n- GS/Vulkan: declining the targets whose runs do not pay (off, unfinished)\n- GS/Vulkan: draws that alternate two sets of constants reuse the earlier upload\n- gsrunner: -runs-nofill-classic, the classic path's no-fill arm (development)\n- GS/Vulkan: the dear split weighs fill against a host draw, per GPU class\n- tests: a hand-worked case of the kick kernel's four-wide decision\n- gsrunner: the readback lane's measurement scaffolding\n- MTGS: a GS-to-EE read spins only while spinning has been answering it\n- MTGS: a GS-to-EE read spins for its answer, and the GS thread for the next read\n- GS/Vulkan: the in-pass kick spends at most a quarter of the readback wait it saves\n- GS/Vulkan: after the gate refuses an in-pass kick, offer it again 32 draws later\n- GS/Vulkan: in a readback frame the kick also ends a pass of many draws\n- GS/HW: the depth target holds the moved words until local memory is read or written there\n- GS/Vulkan: the run log carries each run's bounding-box area by dear class (development)\n- GS/HW: a Z24 move of colour pages into a depth target stays on the GPU\n- GS: a whole-page Z24 move of colour pages lands as a fixed block permutation\n- GS/HW: a burst's second read comes from its first round trip\n- GS/HW: the target reads of one request share one GPU round trip\n- GS/Vulkan: a run flushed from inside an apply keeps the classic path's chosen pipeline\n- GS: a new draw's first vertices are replayed only where a flush check is asked\n- GS: the kernel's conversion pass stands behind its own interface\n- gsrunner: -runs-no-continue, to price the run machine's shortcut (development)\n- GS/Vulkan: the run log records which fixed state ended a run (development)\n- GS/Vulkan: additive draws join runs\n- GS/Vulkan: recorded keys with raster ordering or a stencil counter are loadable\n- GS: the kernel's driver takes the per-draw environment snapshot itself\n- tests: every recorded pipeline key a draw can make is loadable\n- GS: the kick kernel decides a chunk first and converts only the vertices that stay\n- GS/HW: the CPU memory clear's 24-bit and masked fills keep the old bits with one bit select\n- GS: the burst memo uses GSClut's read serial\n- GS/Vulkan: draws without a depth buffer and expanded sprites join runs\n- GS/Vulkan: the run's header and table set takes a descriptor pool of its own\n- GS/Vulkan: a game's recorded pipeline keys survive every build that keeps the key layout\n- GS cache: a key layout identity, hashed from the pipeline selector definitions alone\n- Android: a new install removes only the GPU caches older builds wrote\n- Android: save the shader caches on every trip to the background, not once per 120 s\n- GS cache: write a change a few seconds after it settles, not only every 30 s\n- GS/Vulkan: on Android, name the linked GLSL compiler by its own versions\n- GS/Vulkan: the driver's pipeline blob is stamped by the driver, not the app's build\n- GS/Vulkan: every game's SPIR-V goes into the device's pack as well\n- GS/Vulkan: warm the GLSL compiler on the compile queue when the device opens\n- GS/Vulkan: the recorded-key precompile runs on GSCompileQueue\n- GS: GSCompileQueue, a worker pool for shader and pipeline builds\n- GS cache: a pack makes its directory again when its file is not there\n- tests: a pack is written after its empty directory was removed\n- GS/TC: a target keeps the end block of its valid area\n- GS/HW: the burst memo rests through runs of block copies\n- GS/HW: three values of Draw() are worked out only where they are read\n- GS/HW: the burst memo leaves alone what the copy road cannot take at level 0\n- GS/TC: the post-draw invalidation returns when no source is under the write\n- GS/TC: the target lookup answers from the front of its list\n- GS/HW: the burst memo prefetches what the next packet compare reads\n- GS/HW: the burst memo invalidates the texture cache once per burst\n- GS/HW: the burst memo tests its block-copy gate first\n- gsrunner: the burst memo's vertex counts and slab footprint\n- GS/HW: the burst memo records into recycled slabs\n- GS: the burst memo has no setting\n- gsrunner: -runs-split-mask, and the run log's per-state change counts\n- GS/Vulkan: a draw that opens a run after a ring or texture-array end needs its program built too\n- GS/Vulkan: the run machine's log counts its refusals by detail\n- GS/Vulkan: a draw that continues a run skips the classic path's device work\n- gsrunner: the run machine's development switches\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261108...22b1a7661fa5b29b54fd310911f16841d672bc6d",
+      "version": "2.6.0-nightly.20261112.1132",
+      "versionDate": "2026-11-12",
+      "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20261112/ARMSX2-nightly-20261112-c25493a202-iOS-arm64.ipa",
+      "size": 40658081,
+      "versionDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- IOP thread: hold the lag bound tight for 196,608 cycles after every SIF transfer the EE starts\n- GS/Vulkan: a run's texture set is a fixed array of 32, without a variable descriptor count\n- Android: Auto picks Vulkan on the Bifrost arch 7 parts\n- DriverPacks: offer malisx2 on every Mali of its four arches\n- Android: Auto picks Vulkan on every Mali Valhall v10 part\n- Offer malisx2 on every Mali of arch 7, 9, 10 and 11\n- GPU Drivers pages: name both pack families, pass the session to the setup offer\n- DriverPacks: a malisx2 feed for Mali GPUs on Arm's kbase driver\n- Android: Auto picks Vulkan on the Mali-G610 and G710\n- Android: Vulkan is the default renderer instead of Auto\n- Offer malisx2 on the Mali-G610 and G710 (Valhall v10)\n- GS/Vulkan: VkResultToString names VK_ERROR_FRAGMENTED_POOL and VK_ERROR_OUT_OF_POOL_MEMORY\n- Android: tell a user on Qualcomm's own GPU driver to get a Turnip driver\n- GS/Vulkan: the run machine stops when an empty descriptor pool refuses a set\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261111...c25493a20285dc126a950d2d61826987a566a306",
       "minOSVersion": "17.0"
     },
     {
@@ -463,6 +463,36 @@
       "minOSVersion": "26.0"
     },
     {
+      "name": "Erosion-CN",
+      "bundleIdentifier": "com.jbdotparty.Erosion",
+      "developerName": "Kianuni",
+      "subtitle": "iOS / iPadOS 系统配置与 MobileGestalt 研究工具箱",
+      "localizedDescription": "A Simplified-Chinese localization of the Erosion MobileGestalt toolbox, with hardened write and backup paths for system configuration on iOS / iPadOS 27.x, plus partial support for iOS / iPadOS 26.x. Needs at least one App Group entitlement when re-signing.",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Erosion-CN/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Erosion-CN/images/home.jpeg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Erosion-CN/images/tweaks.jpeg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Erosion-CN/images/files.jpeg"
+      ],
+      "tintColor": "#D07030",
+      "versions": [
+        {
+          "version": "0.9.1",
+          "date": "2026-11-12",
+          "localizedDescription": "## Erosion-CN v0.9.1 更新日志 · Bilingual Release Notes (Build 23)\n\n### 🇨🇳 简体中文\n\n#### 🛠️ 关键 Bug 修复：原生 AI 机型 `Personal Translator (#266)` 基线锁定与双向自愈（修复 #16 / #22）\n1. **修复旧版（`v0.8.3 – v0.8.5`）误关槽位 `#266` 导致相册云端工具与相机 Siri「0 秒瞬间报错」的问题**：\n   - 在所有原生支持 Apple 智能的 iPhone（`iPhone 15 Pro` 至 `iPhone 18 Pro Max` 全系列）原厂 `CacheData` 中，`Personal Translator`（`M1n2sAqf33NAOgZRGxQYBA`，槽位 `#266`）原厂默认为 `true (0x01)`，而 `Audio Intelligence`（`rb2tKZxlj0Gm2tBmUQSLqQ`，槽位 `#178`）原厂默认为 `false (0x00)`。\n   - 此前跨 iOS 版本 OTA 升级（旧 `OriginalGestalt.plist` 的 `CacheUUID` 变化）或非 18 Pro 机型执行一键配齐时，可能将 `#266` 误写为 `false (0x00)` 并污染本地 `UserDefaults` 基线快照，触发 `GenerativeModels / ModelCatalog` 本地预检 0ms 熔断报错（端侧快速消除正常，但**照片高质量消除、扩图延伸、重构及相机 `SIRI` 模式**瞬间报错）。\n   - `v0.9.1` 已锁定全系原生 AI iPhone 的硬件原厂基线（`#266 = true`、`#178 = false`，免疫跨版本备份不匹配与污染缓存），并在恢复出厂 / 重建缓存 / 重生备份时自动清理本地槽位基线记录。\n2. **新增双向异常检测与「一键配齐 / 修复」自愈提示**：\n   - 顶部「Apple 智能激活四要素体检」卡片、实时 `MGCopyAnswer` 核验与防呆护栏现可**双向检测**槽位偏移（无论 `#178` 被强开为 `true` 还是原生 AI 机型的 `#266` 被误关为 `false`）；\n   - 受旧版影响的用户升级 `v0.9.1` 后，打开 `MobileGestalt` 点击顶部 **「一键配齐 / 修复」→「应用」→ 手动关机冷重启** 即可完整恢复原厂基线。\n3. **单包中英双语同步更新**：新增诊断提示词条已 100% 同步内置简体中文 (`zh-Hans`) 与英文 (`en`) 双语翻译。\n\n---\n\n### 🌐 English\n\n#### 🛠️ Critical Bug Fix: `Personal Translator (#266)` Factory Baseline Lock & Two-Way Auto-Heal (Fixes #16 / #22)\n1. **Fixed instant 0ms failure in Photos Cloud Tools (High-Quality Clean Up / Extend / Reframe) & Camera `SIRI` caused by slot `#266` downgrade**:\n   - On all native Apple Intelligence iPhones (`iPhone 15 Pro` through `iPhone 18 Pro Max`), factory `CacheData` sets `Personal Translator` (`M1n2sAqf33NAOgZRGxQYBA`, slot `#266`) to `true (0x01)` and `Audio Intelligence` (`rb2tKZxlj0Gm2tBmUQSLqQ`, slot `#178`) to `false (0x00)`.\n   - Earlier versions (`v0.8.3 – v0.8.5`) could accidentally flip slot `#266` to `false (0x00)` on non-18-Pro models or after an OTA iOS update (`CacheUUID` change) and cache that polluted baseline in `UserDefaults`, causing `GenerativeModels / ModelCatalog` to abort locally in 0ms while Fast Clean Up still worked.\n   - `v0.9.1` enforces the verified hardware factory baseline (`#266 = true`, `#178 = false`) across all native AI iPhones and purges stale `UserDefaults` slot baselines on Factory Restore / Clean Cache Rebuild / Backup Regeneration.\n2. **Two-Way Slot Drift Detection & One-Click Auto-Heal**:\n   - Both the 4-Factor Readiness Checkup Card and live `MGCopyAnswer` verification now detect drift in **both directions** (`#178` forced ON or `#266` accidentally turned OFF on native AI hardware) and expose **One-Click Setup / Repair** immediately.\n   - To heal an affected device: install `v0.9.1` → open **Tweaks → MobileGestalt** → tap **One-Click Setup / Repair** → **Apply** → **power off and cold-reboot**.\n\n---\n\n### 📦 Checksum · 安装包校验信息\n\n- **File**: `Erosion_v0.9.1_Bilingual.ipa`\n- **Version**: `v0.9.1` (Build 23)\n- **SHA-256**: `32a538f9ffbb2e9c604c4a39f58b4491eb3731886ea439dff6b0bdefcb514c98`",
+          "downloadURL": "https://github.com/Kianuni/Erosion-CN/releases/download/v0.9.1/Erosion_v0.9.1_Bilingual.ipa",
+          "size": 6277874,
+          "minOSVersion": "26.0"
+        }
+      ],
+      "version": "0.9.1",
+      "versionDate": "2026-11-12",
+      "downloadURL": "https://github.com/Kianuni/Erosion-CN/releases/download/v0.9.1/Erosion_v0.9.1_Bilingual.ipa",
+      "size": 6277874,
+      "versionDescription": "## Erosion-CN v0.9.1 更新日志 · Bilingual Release Notes (Build 23)\n\n### 🇨🇳 简体中文\n\n#### 🛠️ 关键 Bug 修复：原生 AI 机型 `Personal Translator (#266)` 基线锁定与双向自愈（修复 #16 / #22）\n1. **修复旧版（`v0.8.3 – v0.8.5`）误关槽位 `#266` 导致相册云端工具与相机 Siri「0 秒瞬间报错」的问题**：\n   - 在所有原生支持 Apple 智能的 iPhone（`iPhone 15 Pro` 至 `iPhone 18 Pro Max` 全系列）原厂 `CacheData` 中，`Personal Translator`（`M1n2sAqf33NAOgZRGxQYBA`，槽位 `#266`）原厂默认为 `true (0x01)`，而 `Audio Intelligence`（`rb2tKZxlj0Gm2tBmUQSLqQ`，槽位 `#178`）原厂默认为 `false (0x00)`。\n   - 此前跨 iOS 版本 OTA 升级（旧 `OriginalGestalt.plist` 的 `CacheUUID` 变化）或非 18 Pro 机型执行一键配齐时，可能将 `#266` 误写为 `false (0x00)` 并污染本地 `UserDefaults` 基线快照，触发 `GenerativeModels / ModelCatalog` 本地预检 0ms 熔断报错（端侧快速消除正常，但**照片高质量消除、扩图延伸、重构及相机 `SIRI` 模式**瞬间报错）。\n   - `v0.9.1` 已锁定全系原生 AI iPhone 的硬件原厂基线（`#266 = true`、`#178 = false`，免疫跨版本备份不匹配与污染缓存），并在恢复出厂 / 重建缓存 / 重生备份时自动清理本地槽位基线记录。\n2. **新增双向异常检测与「一键配齐 / 修复」自愈提示**：\n   - 顶部「Apple 智能激活四要素体检」卡片、实时 `MGCopyAnswer` 核验与防呆护栏现可**双向检测**槽位偏移（无论 `#178` 被强开为 `true` 还是原生 AI 机型的 `#266` 被误关为 `false`）；\n   - 受旧版影响的用户升级 `v0.9.1` 后，打开 `MobileGestalt` 点击顶部 **「一键配齐 / 修复」→「应用」→ 手动关机冷重启** 即可完整恢复原厂基线。\n3. **单包中英双语同步更新**：新增诊断提示词条已 100% 同步内置简体中文 (`zh-Hans`) 与英文 (`en`) 双语翻译。\n\n---\n\n### 🌐 English\n\n#### 🛠️ Critical Bug Fix: `Personal Translator (#266)` Factory Baseline Lock & Two-Way Auto-Heal (Fixes #16 / #22)\n1. **Fixed instant 0ms failure in Photos Cloud Tools (High-Quality Clean Up / Extend / Reframe) & Camera `SIRI` caused by slot `#266` downgrade**:\n   - On all native Apple Intelligence iPhones (`iPhone 15 Pro` through `iPhone 18 Pro Max`), factory `CacheData` sets `Personal Translator` (`M1n2sAqf33NAOgZRGxQYBA`, slot `#266`) to `true (0x01)` and `Audio Intelligence` (`rb2tKZxlj0Gm2tBmUQSLqQ`, slot `#178`) to `false (0x00)`.\n   - Earlier versions (`v0.8.3 – v0.8.5`) could accidentally flip slot `#266` to `false (0x00)` on non-18-Pro models or after an OTA iOS update (`CacheUUID` change) and cache that polluted baseline in `UserDefaults`, causing `GenerativeModels / ModelCatalog` to abort locally in 0ms while Fast Clean Up still worked.\n   - `v0.9.1` enforces the verified hardware factory baseline (`#266 = true`, `#178 = false`) across all native AI iPhones and purges stale `UserDefaults` slot baselines on Factory Restore / Clean Cache Rebuild / Backup Regeneration.\n2. **Two-Way Slot Drift Detection & One-Click Auto-Heal**:\n   - Both the 4-Factor Readiness Checkup Card and live `MGCopyAnswer` verification now detect drift in **both directions** (`#178` forced ON or `#266` accidentally turned OFF on native AI hardware) and expose **One-Click Setup / Repair** immediately.\n   - To heal an affected device: install `v0.9.1` → open **Tweaks → MobileGestalt** → tap **One-Click Setup / Repair** → **Apply** → **power off and cold-reboot**.\n\n---\n\n### 📦 Checksum · 安装包校验信息\n\n- **File**: `Erosion_v0.9.1_Bilingual.ipa`\n- **Version**: `v0.9.1` (Build 23)\n- **SHA-256**: `32a538f9ffbb2e9c604c4a39f58b4491eb3731886ea439dff6b0bdefcb514c98`",
+      "minOSVersion": "26.0"
+    },
+    {
       "name": "Fathom",
       "bundleIdentifier": "app.fathom.emulator",
       "developerName": "Leviidev",
@@ -565,17 +595,17 @@
         {
           "version": "1.0",
           "date": "2026-11-12",
-          "localizedDescription": "- Improved Ultra Face layout selection and added a warning when the original layout cannot be restored.",
-          "downloadURL": "https://github.com/pookjw/HermesEnabler/releases/download/1.5.1/HermesEnabler.ipa",
-          "size": 944867,
+          "localizedDescription": "- Added support for watchOS 27.0 beta 3 (24R5315i).\r\n- Improved how original settings are restored when turning features off.",
+          "downloadURL": "https://github.com/pookjw/HermesEnabler/releases/download/1.5.2/HermesEnabler.ipa",
+          "size": 948274,
           "minOSVersion": "17.0"
         }
       ],
       "version": "1.0",
       "versionDate": "2026-11-12",
-      "downloadURL": "https://github.com/pookjw/HermesEnabler/releases/download/1.5.1/HermesEnabler.ipa",
-      "size": 944867,
-      "versionDescription": "- Improved Ultra Face layout selection and added a warning when the original layout cannot be restored.",
+      "downloadURL": "https://github.com/pookjw/HermesEnabler/releases/download/1.5.2/HermesEnabler.ipa",
+      "size": 948274,
+      "versionDescription": "- Added support for watchOS 27.0 beta 3 (24R5315i).\r\n- Improved how original settings are restored when turning features off.",
       "minOSVersion": "17.0"
     },
     {
@@ -654,19 +684,19 @@
       "tintColor": "#111111",
       "versions": [
         {
-          "version": "1.9.2",
-          "date": "2026-11-11",
-          "localizedDescription": "## iPadn 1.9.2\n\n本版本新增「支持 iPadn」页面，改进诊断信息，并修复两个问题。适用于 iOS / iPadOS 17 及更新版本；安装包未签名，请用自己的工具签名后安装。\n\n**支持 iPadn**\n\n- 新增「账号 › 设置 › 支持 iPadn」：iPadn 会一直免费开源、没有广告；如果它帮到了你，可以通过爱发电（支付宝、微信）或 USDT（BEP20）请作者喝杯咖啡，也可以在 GitHub 点个 Star 或帮忙改进翻译。\n\n**下载**\n\n- 修复部分签名方式下下载完成后提示「未能打开文件 CFNetworkDownload_….tmp，因为你没有查看它的权限」（#36）：遇到这种情况会自动改用应用内下载重新下载一次，之后的下载直接在应用内进行，下载时请保持 iPadn 在前台。首次启动时的后台下载检测也会检查文件能否读取。\n\n**诊断**\n\n- 「账号 › 设置 › 维护」新增「复制诊断信息」：在 LiveContainer 等无法弹出分享面板的环境中，可以直接复制后粘贴反馈。\n- 诊断信息会记录最近失败的请求：时间、服务器、接口名称和状态码，不包含账号、链接参数或登录凭据，方便定位下载失败。\n- Apple 返回 401 时，提示登录可能已失效并建议重新登录账号，不再只显示「网络请求失败」。\n\n**应用图标**\n\n- 修复更新 iPadn 后，主屏幕上仍是之前选择的浅色或跟随系统图标，「设置」里却显示为深色。从本版本起 iPadn 会记住你选择的图标；更新前就遇到这种情况时，在「设置 › 应用图标 › 图标主题」中重新选择一次即可。\n\n**English**\n\nAdds a Support iPadn page under Account › Settings: iPadn stays free, open source and ad-free, and you can buy the author a coffee through Afdian or USDT (BEP20) if you like. Fixes downloads that failed with \"you don't have permission to view CFNetworkDownload_….tmp\" under some signing tools (#36): iPadn now downloads such packages again inside the app, and later downloads stay there. Diagnostics now record recent failed requests (time, host, endpoint and status only) and can be copied when the share sheet won't open, as in LiveContainer; a 401 from Apple now suggests signing in again. Also fixes Settings showing the dark icon after an update while the Home Screen kept the light or automatic icon; if this happened before updating, choose the icon theme once more in Settings.\n\n更早版本的更新内容见 [Releases](https://github.com/mengangs/ipadn/releases)。\n\n验证：设备 Release 编译与 IPA 检查通过；136 项测试通过，0 项失败，0 项跳过。",
-          "downloadURL": "https://github.com/mengangs/ipadn/releases/download/v1.9.2/iPadn-1.9.2-unsigned.ipa",
-          "size": 47376820,
+          "version": "2.0.0",
+          "date": "2026-11-12",
+          "localizedDescription": "## iPadn 2.0.0\n\niPadn 2.0 是一次大更新：新增发现页、用户评论、翻译、应用锁、本机应用、Wi‑Fi 传输、灵动岛下载进度、小组件和快捷指令，原生安装可以阻止 App Store 更新，并开始支持 iOS / iPadOS 16。安装包未签名，请用自己的工具签名后安装。\n\n**两个安装包**\n\n- `iPadn-2.0.0-unsigned.ipa`：标准版，包含实时活动（灵动岛、锁屏）和小组件，签名时需要 2 个 App ID。\n- `iPadn-2.0.0-lite-unsigned.ipa`：精简版，不含扩展，只需 1 个 App ID，适合 App ID 数量有限的签名方式。其他功能相同。\n- SideStore、AltStore、Feather 等签名工具可以添加源 `https://raw.githubusercontent.com/mengangs/ipadn/main/altstore-source.json`，在工具里直接安装和更新。\n\n**发现与应用详情**\n\n- 搜索页新增「发现」：免费榜、付费榜、畅销榜，可切换地区并按分类筛选。\n- 详情页新增「评论」，可查看各地区最近的用户评论并按星级筛选。\n- 简介和更新说明不是你的语言时，可以用系统翻译替换为译文（iOS 17.4 及更新版本）。\n- 版本历史默认显示最近 5 个版本。\n\n**下载与安装**\n\n- 锁屏和灵动岛显示下载进度（可在设置中关闭）。\n- 新增「仅使用 Wi‑Fi 下载」和「下载完成后自动安装」。\n- 下载页可以「全部更新」，编辑模式改为紧凑列表并支持全选。\n- 任务详情新增「安装包信息」：权限、扩展、语言、URL Scheme、后台模式等。\n- 原生安装新增「阻止 App Store 更新」：App Store 会把应用视为最新版本，不再提示或自动更新；关闭后再安装一次即可恢复（#46）。\n- 新增「账号 › 本机应用」：列出手机上已装的应用，对比 App Store 版本并一键全部更新（需要原生安装的配对）。\n- 新增「账号 › Wi‑Fi 传输」：在同一 Wi‑Fi 的电脑浏览器中下载已完成的安装包，只在页面打开时运行，地址带随机密钥。\n- 在 LiveContainer 中运行时，会提示打开 LiveContainer 的「修复文件导入」，之后才能导入导出文件和一键安装（#44）。\n\n**关注与价格**\n\n- 关注的付费应用可以设置目标价，降到目标价才提醒。\n\n**安全与快捷操作**\n\n- 新增应用锁：面容 ID、触控 ID 或密码，可设置离开多久后需要验证，多任务界面中也会隐藏内容。\n- 新增主屏幕和锁屏小组件：快速打开搜索、下载、已购和更新检查。\n- 新增快捷指令：下载应用、检查更新、下载全部更新、获取下载进度、暂停或继续全部下载、关注应用。\n\n**专业模式**\n\n- 可以对比同一应用的两个已下载版本：版本、权限、扩展、框架等变化。\n\n**设置**\n\n- 设置首页改为分类入口；新增「备份与维护」导出、导入设置和关注列表（不含账号和安装包）。\n- 关闭「新版本提醒」后，下载页也不再显示更新提示。\n\n**系统支持与稳定性**\n\n- 支持 iOS / iPadOS 16 及更新版本（感谢 @tageniu）。\n- 修复部分安装包（如网易云音乐）的图标导致 iPadn 启动后崩溃。\n- 切换标签页更流畅：不再每次重建所有页面（#41）。\n\n**English**\n\niPadn 2.0 adds Discover (top charts by region and category), customer reviews, system translation of descriptions and release notes, App Lock, Apps on This Device, Wi‑Fi transfer to a computer, download progress on the Lock Screen and in the Dynamic Island, widgets and Shortcuts actions. Downloads can wait for Wi‑Fi and install automatically when finished; native installation can block App Store updates for an app. Package info shows what a package declares, and Pro mode compares two downloaded versions. Followed paid apps can have a target price, settings are grouped into pages with backup export and import, and iOS / iPadOS 16 is now supported. Releases include a lite package without the app extension that needs a single App ID. Also fixes a launch crash caused by some packages' icons and makes tab switching smoother.\n\n更早版本的更新内容见 [Releases](https://github.com/mengangs/ipadn/releases)。\n\n两个安装包：`iPadn-2.0.0-unsigned.ipa` 是标准版（含实时活动和桌面小组件，需要 2 个 App ID）；`iPadn-2.0.0-lite-unsigned.ipa` 是精简版（不含扩展，只需 1 个 App ID），适合 App ID 数量受限的签名方式。\n\n验证：设备 Release 编译与 IPA 检查通过；145 项测试通过，0 项失败，0 项跳过。",
+          "downloadURL": "https://github.com/mengangs/ipadn/releases/download/v2.0.0/iPadn-2.0.0-lite-unsigned.ipa",
+          "size": 48080581,
           "minOSVersion": "17.0"
         }
       ],
-      "version": "1.9.2",
-      "versionDate": "2026-11-11",
-      "downloadURL": "https://github.com/mengangs/ipadn/releases/download/v1.9.2/iPadn-1.9.2-unsigned.ipa",
-      "size": 47376820,
-      "versionDescription": "## iPadn 1.9.2\n\n本版本新增「支持 iPadn」页面，改进诊断信息，并修复两个问题。适用于 iOS / iPadOS 17 及更新版本；安装包未签名，请用自己的工具签名后安装。\n\n**支持 iPadn**\n\n- 新增「账号 › 设置 › 支持 iPadn」：iPadn 会一直免费开源、没有广告；如果它帮到了你，可以通过爱发电（支付宝、微信）或 USDT（BEP20）请作者喝杯咖啡，也可以在 GitHub 点个 Star 或帮忙改进翻译。\n\n**下载**\n\n- 修复部分签名方式下下载完成后提示「未能打开文件 CFNetworkDownload_….tmp，因为你没有查看它的权限」（#36）：遇到这种情况会自动改用应用内下载重新下载一次，之后的下载直接在应用内进行，下载时请保持 iPadn 在前台。首次启动时的后台下载检测也会检查文件能否读取。\n\n**诊断**\n\n- 「账号 › 设置 › 维护」新增「复制诊断信息」：在 LiveContainer 等无法弹出分享面板的环境中，可以直接复制后粘贴反馈。\n- 诊断信息会记录最近失败的请求：时间、服务器、接口名称和状态码，不包含账号、链接参数或登录凭据，方便定位下载失败。\n- Apple 返回 401 时，提示登录可能已失效并建议重新登录账号，不再只显示「网络请求失败」。\n\n**应用图标**\n\n- 修复更新 iPadn 后，主屏幕上仍是之前选择的浅色或跟随系统图标，「设置」里却显示为深色。从本版本起 iPadn 会记住你选择的图标；更新前就遇到这种情况时，在「设置 › 应用图标 › 图标主题」中重新选择一次即可。\n\n**English**\n\nAdds a Support iPadn page under Account › Settings: iPadn stays free, open source and ad-free, and you can buy the author a coffee through Afdian or USDT (BEP20) if you like. Fixes downloads that failed with \"you don't have permission to view CFNetworkDownload_….tmp\" under some signing tools (#36): iPadn now downloads such packages again inside the app, and later downloads stay there. Diagnostics now record recent failed requests (time, host, endpoint and status only) and can be copied when the share sheet won't open, as in LiveContainer; a 401 from Apple now suggests signing in again. Also fixes Settings showing the dark icon after an update while the Home Screen kept the light or automatic icon; if this happened before updating, choose the icon theme once more in Settings.\n\n更早版本的更新内容见 [Releases](https://github.com/mengangs/ipadn/releases)。\n\n验证：设备 Release 编译与 IPA 检查通过；136 项测试通过，0 项失败，0 项跳过。",
+      "version": "2.0.0",
+      "versionDate": "2026-11-12",
+      "downloadURL": "https://github.com/mengangs/ipadn/releases/download/v2.0.0/iPadn-2.0.0-lite-unsigned.ipa",
+      "size": 48080581,
+      "versionDescription": "## iPadn 2.0.0\n\niPadn 2.0 是一次大更新：新增发现页、用户评论、翻译、应用锁、本机应用、Wi‑Fi 传输、灵动岛下载进度、小组件和快捷指令，原生安装可以阻止 App Store 更新，并开始支持 iOS / iPadOS 16。安装包未签名，请用自己的工具签名后安装。\n\n**两个安装包**\n\n- `iPadn-2.0.0-unsigned.ipa`：标准版，包含实时活动（灵动岛、锁屏）和小组件，签名时需要 2 个 App ID。\n- `iPadn-2.0.0-lite-unsigned.ipa`：精简版，不含扩展，只需 1 个 App ID，适合 App ID 数量有限的签名方式。其他功能相同。\n- SideStore、AltStore、Feather 等签名工具可以添加源 `https://raw.githubusercontent.com/mengangs/ipadn/main/altstore-source.json`，在工具里直接安装和更新。\n\n**发现与应用详情**\n\n- 搜索页新增「发现」：免费榜、付费榜、畅销榜，可切换地区并按分类筛选。\n- 详情页新增「评论」，可查看各地区最近的用户评论并按星级筛选。\n- 简介和更新说明不是你的语言时，可以用系统翻译替换为译文（iOS 17.4 及更新版本）。\n- 版本历史默认显示最近 5 个版本。\n\n**下载与安装**\n\n- 锁屏和灵动岛显示下载进度（可在设置中关闭）。\n- 新增「仅使用 Wi‑Fi 下载」和「下载完成后自动安装」。\n- 下载页可以「全部更新」，编辑模式改为紧凑列表并支持全选。\n- 任务详情新增「安装包信息」：权限、扩展、语言、URL Scheme、后台模式等。\n- 原生安装新增「阻止 App Store 更新」：App Store 会把应用视为最新版本，不再提示或自动更新；关闭后再安装一次即可恢复（#46）。\n- 新增「账号 › 本机应用」：列出手机上已装的应用，对比 App Store 版本并一键全部更新（需要原生安装的配对）。\n- 新增「账号 › Wi‑Fi 传输」：在同一 Wi‑Fi 的电脑浏览器中下载已完成的安装包，只在页面打开时运行，地址带随机密钥。\n- 在 LiveContainer 中运行时，会提示打开 LiveContainer 的「修复文件导入」，之后才能导入导出文件和一键安装（#44）。\n\n**关注与价格**\n\n- 关注的付费应用可以设置目标价，降到目标价才提醒。\n\n**安全与快捷操作**\n\n- 新增应用锁：面容 ID、触控 ID 或密码，可设置离开多久后需要验证，多任务界面中也会隐藏内容。\n- 新增主屏幕和锁屏小组件：快速打开搜索、下载、已购和更新检查。\n- 新增快捷指令：下载应用、检查更新、下载全部更新、获取下载进度、暂停或继续全部下载、关注应用。\n\n**专业模式**\n\n- 可以对比同一应用的两个已下载版本：版本、权限、扩展、框架等变化。\n\n**设置**\n\n- 设置首页改为分类入口；新增「备份与维护」导出、导入设置和关注列表（不含账号和安装包）。\n- 关闭「新版本提醒」后，下载页也不再显示更新提示。\n\n**系统支持与稳定性**\n\n- 支持 iOS / iPadOS 16 及更新版本（感谢 @tageniu）。\n- 修复部分安装包（如网易云音乐）的图标导致 iPadn 启动后崩溃。\n- 切换标签页更流畅：不再每次重建所有页面（#41）。\n\n**English**\n\niPadn 2.0 adds Discover (top charts by region and category), customer reviews, system translation of descriptions and release notes, App Lock, Apps on This Device, Wi‑Fi transfer to a computer, download progress on the Lock Screen and in the Dynamic Island, widgets and Shortcuts actions. Downloads can wait for Wi‑Fi and install automatically when finished; native installation can block App Store updates for an app. Package info shows what a package declares, and Pro mode compares two downloaded versions. Followed paid apps can have a target price, settings are grouped into pages with backup export and import, and iOS / iPadOS 16 is now supported. Releases include a lite package without the app extension that needs a single App ID. Also fixes a launch crash caused by some packages' icons and makes tab switching smoother.\n\n更早版本的更新内容见 [Releases](https://github.com/mengangs/ipadn/releases)。\n\n两个安装包：`iPadn-2.0.0-unsigned.ipa` 是标准版（含实时活动和桌面小组件，需要 2 个 App ID）；`iPadn-2.0.0-lite-unsigned.ipa` 是精简版（不含扩展，只需 1 个 App ID），适合 App ID 数量受限的签名方式。\n\n验证：设备 Release 编译与 IPA 检查通过；145 项测试通过，0 项失败，0 项跳过。",
       "minOSVersion": "17.0"
     },
     {
@@ -746,19 +776,19 @@
       "tintColor": "#4CAF50",
       "versions": [
         {
-          "version": "2.4.3",
-          "date": "2026-11-04",
-          "localizedDescription": "- 新增自定义规则仓库支持 (#2485) (@chendianshuiyin)\r\n- 优化远程投屏体验 (#2797 #2798) (@DSplay123)\r\n- 新增 iPhone Duo 内屏支持 (@Predidit)\r\n- 修复批量下载时排队剧集没有缓存弹幕的问题 (#2780) (@wanxinlei1)\r\n- 修复退出后系统托盘图标残留的问题 (#2762) (@fgfsgsgvo)\r\n- 修复 deb 软件包在精简安装的发行版上无法启动的问题 (#2755) (@Huayuluoshi)\r\n- 优化追番页切换分类时的流畅度 (@Predidit)\r\n- 文档更新 (@Predidit)",
-          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.4.3/Kazumi_ios_2.4.3_no_sign.ipa",
-          "size": 30439714,
+          "version": "2.4.4",
+          "date": "2026-11-12",
+          "localizedDescription": "- 适配 flutter 3.50",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.4.4/Kazumi_ios_2.4.4_no_sign.ipa",
+          "size": 30341213,
           "minOSVersion": "13.0"
         }
       ],
-      "version": "2.4.3",
-      "versionDate": "2026-11-04",
-      "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.4.3/Kazumi_ios_2.4.3_no_sign.ipa",
-      "size": 30439714,
-      "versionDescription": "- 新增自定义规则仓库支持 (#2485) (@chendianshuiyin)\r\n- 优化远程投屏体验 (#2797 #2798) (@DSplay123)\r\n- 新增 iPhone Duo 内屏支持 (@Predidit)\r\n- 修复批量下载时排队剧集没有缓存弹幕的问题 (#2780) (@wanxinlei1)\r\n- 修复退出后系统托盘图标残留的问题 (#2762) (@fgfsgsgvo)\r\n- 修复 deb 软件包在精简安装的发行版上无法启动的问题 (#2755) (@Huayuluoshi)\r\n- 优化追番页切换分类时的流畅度 (@Predidit)\r\n- 文档更新 (@Predidit)",
+      "version": "2.4.4",
+      "versionDate": "2026-11-12",
+      "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.4.4/Kazumi_ios_2.4.4_no_sign.ipa",
+      "size": 30341213,
+      "versionDescription": "- 适配 flutter 3.50",
       "minOSVersion": "13.0"
     },
     {
@@ -1669,6 +1699,34 @@
       "minOSVersion": "18.0"
     },
     {
+      "name": "Stats",
+      "bundleIdentifier": "com.ishtiaqsyed.StatsForIOS",
+      "developerName": "ishtiaq156",
+      "subtitle": "Your Mac's activity, at a glance",
+      "localizedDescription": "View your Mac's system activity on iPhone over a local encrypted connection. A native, local-first system monitor with a lightweight Mac companion and a mobile dashboard.",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Stats/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Stats/images/link.jpeg"
+      ],
+      "tintColor": "#2090F0",
+      "versions": [
+        {
+          "version": "0.3.3",
+          "date": "2026-11-12",
+          "localizedDescription": "Stats Companion 0.3.6 moves paired-phone management to its own Settings page and lets you rename existing phones without pairing again. The accompanying Stats iPhone 0.3.3 update adds editable phone names during pairing and configurable passcode haptics.\n\n## What's Changed\n\n### Features\n\n- Open **Paired phones** from a compact Settings row to see a scrollable list of connected and previously paired phones.\n- Rename phones in Companion without revoking their saved credentials; the name is remembered after a restart.\n- Choose the name sent by the iPhone during pairing, including when iOS supplies a generic device name.\n- Enable or disable tactile passcode feedback from iPhone Settings. Keypad taps, deletion, paste, and pairing results respect the preference.\n\n### Improvements and Fixes\n\n- Keep Companion's main Settings page compact when many phones are paired.\n- Keep individual Revoke actions available on the dedicated phone management page.\n- Preserve phone credentials across renames and remove saved aliases when access is revoked.\n\n## Download\n\n- **Mac companion · 0.3.6:** `StatsCompanion-v0.3.6-macOS-universal.dmg` (Apple Silicon and Intel; Apple Development signed).\n- **iPhone app · 0.3.3:** `Stats-v0.3.3-iOS.ipa` (unsigned; sign before installing with SideStore or another compatible method).\n- See the [README](https://github.com/ishtiaq156/stats#quick-start) for installation and pairing instructions.\n\n**Full Changelog:** [Compare v0.3.5...v0.3.6](https://github.com/ishtiaq156/stats/compare/v0.3.5...v0.3.6)",
+          "downloadURL": "https://github.com/ishtiaq156/stats/releases/download/v0.3.6/Stats-v0.3.3-iOS.ipa",
+          "size": 2610574,
+          "minOSVersion": "17.0"
+        }
+      ],
+      "version": "0.3.3",
+      "versionDate": "2026-11-12",
+      "downloadURL": "https://github.com/ishtiaq156/stats/releases/download/v0.3.6/Stats-v0.3.3-iOS.ipa",
+      "size": 2610574,
+      "versionDescription": "Stats Companion 0.3.6 moves paired-phone management to its own Settings page and lets you rename existing phones without pairing again. The accompanying Stats iPhone 0.3.3 update adds editable phone names during pairing and configurable passcode haptics.\n\n## What's Changed\n\n### Features\n\n- Open **Paired phones** from a compact Settings row to see a scrollable list of connected and previously paired phones.\n- Rename phones in Companion without revoking their saved credentials; the name is remembered after a restart.\n- Choose the name sent by the iPhone during pairing, including when iOS supplies a generic device name.\n- Enable or disable tactile passcode feedback from iPhone Settings. Keypad taps, deletion, paste, and pairing results respect the preference.\n\n### Improvements and Fixes\n\n- Keep Companion's main Settings page compact when many phones are paired.\n- Keep individual Revoke actions available on the dedicated phone management page.\n- Preserve phone credentials across renames and remove saved aliases when access is revoked.\n\n## Download\n\n- **Mac companion · 0.3.6:** `StatsCompanion-v0.3.6-macOS-universal.dmg` (Apple Silicon and Intel; Apple Development signed).\n- **iPhone app · 0.3.3:** `Stats-v0.3.3-iOS.ipa` (unsigned; sign before installing with SideStore or another compatible method).\n- See the [README](https://github.com/ishtiaq156/stats#quick-start) for installation and pairing instructions.\n\n**Full Changelog:** [Compare v0.3.5...v0.3.6](https://github.com/ishtiaq156/stats/compare/v0.3.5...v0.3.6)",
+      "minOSVersion": "17.0"
+    },
+    {
       "name": "StikDebug",
       "bundleIdentifier": "com.stik.stikdebug",
       "developerName": "StikDebug",
@@ -1820,6 +1878,64 @@
       "buildVersion": "249"
     },
     {
+      "name": "WQ Files",
+      "bundleIdentifier": "cz.kolbi.wqfiles",
+      "developerName": "kolbicz",
+      "subtitle": "File manager for iOS 26 and 27 (worse_query)",
+      "localizedDescription": "File browser, app data manager and cache cleaner for iOS 26 and 27, built on the worse_query sandbox technique. Browse other apps' containers, edit plists, hex and SQLite databases, and back up, restore or clear app data without a jailbreak or kernel exploit.",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WQFiles/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WQFiles/images/home.jpeg"
+      ],
+      "tintColor": "#1E8FC7",
+      "versions": [
+        {
+          "version": "0.9.3",
+          "date": "2026-11-11",
+          "localizedDescription": "> **Requires:** iOS 27, or iOS 26.0 – 26.7.2 (preliminary support). Tested on iOS 27.0.1, 27.2.1 and 26.7.1.\n> **Needs:** a sideloading tool that keeps the App Group entitlement; see [Signing](https://github.com/kolbicz/WQFiles#signing-the-app-group) in the README.\n\n# Worse Query Files 0.9.3\n\n## New\n\n- **Startup check:** while the start screen is up, WQ Files checks in the background that everything it depends on works: the App Group, finding other apps' folders, its sandbox access (a sample of those folders must really open) and the app database (names). If a new iOS version or a signing problem breaks something essential, WQ Files now stops with what failed, with **Try Again**, **Log** and **Continue Anyway**, instead of showing empty or wrong lists. Problems that leave it partly usable are shown once as a notice.\n- **Recently Deleted** (under Backups on the start screen, [#41](https://github.com/kolbicz/WQFiles/issues/41)): files WQ Files deleted, newest first, from their copies in Backups. Tap to view, **Restore** puts a file back where it was (missing folders are created, nothing is replaced), **Delete Permanently** or **Delete All** removes them from Backups.\n\n## Changed\n\n- **Cache Cleaner:** the bar shows the scan's progress while scanning, and the total counts up during the first scan.\n- **App Bundles** and **Open App Bundle** only appear where iOS lets WQ Files open those folders; iOS 26 and 27.0.1 don't.\n- **Offloaded apps:** Apple's built-in apps count as installed, and the Installed/Offloaded filters only appear when the state of nearly every app can be read. On the iOS versions tested so far iOS refuses to show other apps' bundles, so the filters usually stay hidden.\n\n## Fixed\n\n- **Log:** reading app bundles no longer adds a line per app.\n\n## Credit\n\nSandbox technique: [worse_query](https://github.com/forcequitOS/worse_query) by Taj C (forcequit). Container enumeration: [KAMUI](https://github.com/murk-sus/kamui-escape) by murk-sus. Translations: iosrxwy (Simplified Chinese), hfip (Arabic), hooray804 (Korean). Thanks to everyone who sent Logs and ideas. GPL-3.0-or-later.\n\nSHA-256 of WQFiles.ipa: `7aa60c63dc1c51928ab0d0d304dd56f07204a132b7833cc50b5ab3d4b3b0b321`",
+          "downloadURL": "https://github.com/kolbicz/WQFiles/releases/download/v0.9.3/WQFiles.ipa",
+          "size": 559984,
+          "minOSVersion": "26.0"
+        }
+      ],
+      "version": "0.9.3",
+      "versionDate": "2026-11-11",
+      "downloadURL": "https://github.com/kolbicz/WQFiles/releases/download/v0.9.3/WQFiles.ipa",
+      "size": 559984,
+      "versionDescription": "> **Requires:** iOS 27, or iOS 26.0 – 26.7.2 (preliminary support). Tested on iOS 27.0.1, 27.2.1 and 26.7.1.\n> **Needs:** a sideloading tool that keeps the App Group entitlement; see [Signing](https://github.com/kolbicz/WQFiles#signing-the-app-group) in the README.\n\n# Worse Query Files 0.9.3\n\n## New\n\n- **Startup check:** while the start screen is up, WQ Files checks in the background that everything it depends on works: the App Group, finding other apps' folders, its sandbox access (a sample of those folders must really open) and the app database (names). If a new iOS version or a signing problem breaks something essential, WQ Files now stops with what failed, with **Try Again**, **Log** and **Continue Anyway**, instead of showing empty or wrong lists. Problems that leave it partly usable are shown once as a notice.\n- **Recently Deleted** (under Backups on the start screen, [#41](https://github.com/kolbicz/WQFiles/issues/41)): files WQ Files deleted, newest first, from their copies in Backups. Tap to view, **Restore** puts a file back where it was (missing folders are created, nothing is replaced), **Delete Permanently** or **Delete All** removes them from Backups.\n\n## Changed\n\n- **Cache Cleaner:** the bar shows the scan's progress while scanning, and the total counts up during the first scan.\n- **App Bundles** and **Open App Bundle** only appear where iOS lets WQ Files open those folders; iOS 26 and 27.0.1 don't.\n- **Offloaded apps:** Apple's built-in apps count as installed, and the Installed/Offloaded filters only appear when the state of nearly every app can be read. On the iOS versions tested so far iOS refuses to show other apps' bundles, so the filters usually stay hidden.\n\n## Fixed\n\n- **Log:** reading app bundles no longer adds a line per app.\n\n## Credit\n\nSandbox technique: [worse_query](https://github.com/forcequitOS/worse_query) by Taj C (forcequit). Container enumeration: [KAMUI](https://github.com/murk-sus/kamui-escape) by murk-sus. Translations: iosrxwy (Simplified Chinese), hfip (Arabic), hooray804 (Korean). Thanks to everyone who sent Logs and ideas. GPL-3.0-or-later.\n\nSHA-256 of WQFiles.ipa: `7aa60c63dc1c51928ab0d0d304dd56f07204a132b7833cc50b5ab3d4b3b0b321`",
+      "minOSVersion": "26.0"
+    },
+    {
+      "name": "WQToolkit",
+      "bundleIdentifier": "com.zhangfuhao.wqtoolkit",
+      "developerName": "MchinaMd57764",
+      "subtitle": "File browser and maintenance panel for your own app containers",
+      "localizedDescription": "An iOS toolkit built on an App Group container-query primitive: browse, clean and inspect your own app data containers without a jailbreak. Includes a file browser, cache scan, device info, a MobileGestalt cache panel and data lenses, with a bilingual UI and iPhone/iPad layouts.",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WQToolkit/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WQToolkit/images/files.jpeg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WQToolkit/images/settings.jpeg",
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WQToolkit/images/tweaks.jpeg"
+      ],
+      "tintColor": "#6090D0",
+      "versions": [
+        {
+          "version": "1.0",
+          "date": "2026-11-11",
+          "localizedDescription": "iOS 27 only. Unsigned build - it contains no signing material, no profile and no team ID.\n\n**Assets**\n- `WQToolkit-unsigned.ipa` - 4.6 MB. Re-sign it with your own developer identity and an App Group entitlement before installing.\n- `WQToolkit_source.tar.gz` - source snapshot (Xcode project included).\n\nNo jailbreak, no Mac at runtime. The app only reaches its own containers and its own App Groups; cross-app access is out of scope.\n\nTested on iPhone 15 Pro Max, iOS 27.3.",
+          "downloadURL": "https://github.com/MchinaMd57764/WQToolkit/releases/download/v1.0/WQToolkit-unsigned.ipa",
+          "size": 4819436,
+          "minOSVersion": "27.0"
+        }
+      ],
+      "version": "1.0",
+      "versionDate": "2026-11-11",
+      "downloadURL": "https://github.com/MchinaMd57764/WQToolkit/releases/download/v1.0/WQToolkit-unsigned.ipa",
+      "size": 4819436,
+      "versionDescription": "iOS 27 only. Unsigned build - it contains no signing material, no profile and no team ID.\n\n**Assets**\n- `WQToolkit-unsigned.ipa` - 4.6 MB. Re-sign it with your own developer identity and an App Group entitlement before installing.\n- `WQToolkit_source.tar.gz` - source snapshot (Xcode project included).\n\nNo jailbreak, no Mac at runtime. The app only reaches its own containers and its own App Groups; cross-app access is out of scope.\n\nTested on iPhone 15 Pro Max, iOS 27.3.",
+      "minOSVersion": "27.0"
+    },
+    {
       "name": "YouProEXTRA",
       "bundleIdentifier": "com.google.ios.youtube",
       "developerName": "alibusut",
@@ -1883,6 +1999,61 @@
   ],
   "news": [
     {
+      "appID": "com.example.HermesEnabler",
+      "title": "HermesEnabler 1.0 · 12 Nov 2026",
+      "identifier": "HermesEnabler-release-1.5.2",
+      "caption": "HermesEnabler 1.0 is available.",
+      "date": "2026-11-12T14:49:08Z",
+      "tintColor": "#70C0F0",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/HermesEnabler/images/news.png",
+      "notify": true,
+      "url": "https://github.com/pookjw/HermesEnabler/releases/tag/1.5.2"
+    },
+    {
+      "appID": "com.jbdotparty.Erosion",
+      "title": "Erosion-CN 0.9.1 · 12 Nov 2026",
+      "identifier": "Erosion-CN-release-v0.9.1",
+      "caption": "Erosion-CN 0.9.1 is available.",
+      "date": "2026-11-12T13:06:38Z",
+      "tintColor": "#D07030",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Erosion-CN/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Kianuni/Erosion-CN/releases/tag/v0.9.1"
+    },
+    {
+      "appID": "com.armsx2.ios",
+      "title": "ARMSX2 2.6.0-nightly.20261112.1132 · 12 Nov 2026",
+      "identifier": "ARMSX2-release-nightly-20261112",
+      "caption": "ARMSX2 2.6.0-nightly.20261112.1132 is available.",
+      "date": "2026-11-12T11:58:10Z",
+      "tintColor": "#3CAEFF",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
+      "notify": true,
+      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261112"
+    },
+    {
+      "appID": "app.local.iPadn",
+      "title": "iPadn 2.0.0 · 12 Nov 2026",
+      "identifier": "iPadn-release-v2.0.0",
+      "caption": "iPadn 2.0.0 is available.",
+      "date": "2026-11-12T10:41:39Z",
+      "tintColor": "#111111",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iPadn/images/news.png",
+      "notify": true,
+      "url": "https://github.com/mengangs/ipadn/releases/tag/v2.0.0"
+    },
+    {
+      "appID": "com.example.kazumi",
+      "title": "Kazumi 2.4.4 · 12 Nov 2026",
+      "identifier": "Kazumi-release-2.4.4",
+      "caption": "Kazumi 2.4.4 is available.",
+      "date": "2026-11-12T10:27:44Z",
+      "tintColor": "#4CAF50",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Predidit/Kazumi/releases/tag/2.4.4"
+    },
+    {
       "appID": "com.linkpass.kazumi",
       "title": "Kazumi-Swift 3.0.5 · 12 Nov 2026",
       "identifier": "Kazumi-Swift-release-3.0.5",
@@ -1894,15 +2065,37 @@
       "url": "https://github.com/LinkPass888/Kazumi-Swift/releases/tag/3.0.5"
     },
     {
-      "appID": "com.example.HermesEnabler",
-      "title": "HermesEnabler 1.0 · 12 Nov 2026",
-      "identifier": "HermesEnabler-release-1.5.1",
-      "caption": "HermesEnabler 1.0 is available.",
-      "date": "2026-11-12T04:11:27Z",
-      "tintColor": "#70C0F0",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/HermesEnabler/images/news.png",
+      "appID": "com.ishtiaqsyed.StatsForIOS",
+      "title": "Stats 0.3.3 · 12 Nov 2026",
+      "identifier": "Stats-release-v0.3.6",
+      "caption": "Stats 0.3.3 is available.",
+      "date": "2026-11-12T02:12:58Z",
+      "tintColor": "#2090F0",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Stats/images/news.png",
       "notify": true,
-      "url": "https://github.com/pookjw/HermesEnabler/releases/tag/1.5.1"
+      "url": "https://github.com/ishtiaq156/stats/releases/tag/v0.3.6"
+    },
+    {
+      "appID": "com.zhangfuhao.wqtoolkit",
+      "title": "WQToolkit 1.0 · 11 Nov 2026",
+      "identifier": "WQToolkit-release-v1.0",
+      "caption": "WQToolkit 1.0 is available.",
+      "date": "2026-11-11T22:59:56Z",
+      "tintColor": "#6090D0",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WQToolkit/images/news.png",
+      "notify": true,
+      "url": "https://github.com/MchinaMd57764/WQToolkit/releases/tag/v1.0"
+    },
+    {
+      "appID": "cz.kolbi.wqfiles",
+      "title": "WQ Files 0.9.3 · 11 Nov 2026",
+      "identifier": "WQ Files-release-v0.9.3",
+      "caption": "WQ Files 0.9.3 is available.",
+      "date": "2026-11-11T18:18:51Z",
+      "tintColor": "#1E8FC7",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WQFiles/images/news.png",
+      "notify": true,
+      "url": "https://github.com/kolbicz/WQFiles/releases/tag/v0.9.3"
     },
     {
       "appID": "com.thebcd69.bcd",
@@ -1914,28 +2107,6 @@
       "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/BCD/images/news.png",
       "notify": true,
       "url": "https://github.com/thebcd69/bcd-games/releases/tag/v0.1.653"
-    },
-    {
-      "appID": "app.local.iPadn",
-      "title": "iPadn 1.9.2 · 11 Nov 2026",
-      "identifier": "iPadn-release-v1.9.2",
-      "caption": "iPadn 1.9.2 is available.",
-      "date": "2026-11-11T11:19:37Z",
-      "tintColor": "#111111",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iPadn/images/news.png",
-      "notify": true,
-      "url": "https://github.com/mengangs/ipadn/releases/tag/v1.9.2"
-    },
-    {
-      "appID": "com.armsx2.ios",
-      "title": "ARMSX2 2.6.0-nightly.20261111.0647 · 11 Nov 2026",
-      "identifier": "ARMSX2-release-nightly-20261111",
-      "caption": "ARMSX2 2.6.0-nightly.20261111.0647 is available.",
-      "date": "2026-11-11T07:21:22Z",
-      "tintColor": "#3CAEFF",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
-      "notify": true,
-      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261111"
     },
     {
       "appID": "com.huami.gestultx",
@@ -2134,17 +2305,6 @@
       "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Husk/images/news.png",
       "notify": true,
       "url": "https://github.com/Leviidev/Husk/releases/tag/3.4"
-    },
-    {
-      "appID": "com.example.kazumi",
-      "title": "Kazumi 2.4.3 · 04 Nov 2026",
-      "identifier": "Kazumi-release-2.4.3",
-      "caption": "Kazumi 2.4.3 is available.",
-      "date": "2026-11-04T12:12:33Z",
-      "tintColor": "#4CAF50",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/images/news.png",
-      "notify": true,
-      "url": "https://github.com/Predidit/Kazumi/releases/tag/2.4.3"
     },
     {
       "appID": "com.willfaust.madeora",
