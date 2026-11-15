@@ -357,19 +357,19 @@
       "tintColor": "#4080E0",
       "versions": [
         {
-          "version": "1.8.6",
-          "date": "2026-10-10T08:03:04Z",
-          "localizedDescription": "**Full Changelog**: https://github.com/moliango/doer/compare/v1.8.5.3...v1.8.6",
-          "downloadURL": "https://github.com/moliango/doer/releases/download/v1.8.6/doer-unsigned.ipa",
-          "size": 28095758,
+          "version": "1.8.7",
+          "date": "2026-11-15T13:11:40Z",
+          "localizedDescription": "**Full Changelog**: https://github.com/moliango/doer/compare/v1.8.6...v1.8.7",
+          "downloadURL": "https://github.com/moliango/doer/releases/download/v1.8.7/doer-unsigned.ipa",
+          "size": 28409295,
           "minOSVersion": "15.0"
         }
       ],
-      "version": "1.8.6",
-      "versionDate": "2026-10-10T08:03:04Z",
-      "downloadURL": "https://github.com/moliango/doer/releases/download/v1.8.6/doer-unsigned.ipa",
-      "size": 28095758,
-      "versionDescription": "**Full Changelog**: https://github.com/moliango/doer/compare/v1.8.5.3...v1.8.6",
+      "version": "1.8.7",
+      "versionDate": "2026-11-15T13:11:40Z",
+      "downloadURL": "https://github.com/moliango/doer/releases/download/v1.8.7/doer-unsigned.ipa",
+      "size": 28409295,
+      "versionDescription": "**Full Changelog**: https://github.com/moliango/doer/compare/v1.8.6...v1.8.7",
       "minOSVersion": "15.0"
     },
     {
@@ -684,19 +684,19 @@
       "tintColor": "#111111",
       "versions": [
         {
-          "version": "2.1.1",
-          "date": "2026-11-14T05:53:21Z",
-          "localizedDescription": "## iPadn 2.1.1\n\n本次为修复与布局优化更新，包含 iOS 16 安装设置崩溃修复和历史版本日期范围筛选排版改进。安装包未签名，请用自己的工具签名后安装。\n\n### 修复与优化\n\n- **修复 iOS 16 打开安装设置时崩溃**：对安装帮助链接的中文片段进行显式编码，并避免无效 URL 的强制解包。感谢 #86 的贡献。\n- **完善商店链接容错**：应用详情无法构造有效 App Store 链接时，不再强制解包或显示不可用的查看/分享入口。\n- **优化历史版本日期筛选面板**：将起止日期、查询/取消/清除按钮与状态提示集中展示，统一日期控件对齐和布局间距，并适配无障碍大字体。保留原有日期查询、取消与清除行为。详见 #87。\n- 继续支持 iOS / iPadOS 16 及更新版本，各功能保留各自系统版本要求。\n\n### 两个安装包\n\n- `iPadn-2.1.1-unsigned.ipa`：标准版，含实时活动和小组件，签名需要 2 个 App ID。\n- `iPadn-2.1.1-lite-unsigned.ipa`：精简版，不含扩展，只需 1 个 App ID；不提供实时活动或小组件，其他功能相同。\n- SideStore、AltStore、Feather 等签名工具可添加源：`https://raw.githubusercontent.com/mengangs/ipadn/main/altstore-source.json`。\n\n### English\n\nThis maintenance update fixes a crash when opening Installation settings on iOS 16 and improves the version-history date-range filter layout.\n\n- Encode the installation-help URL fragment explicitly for iOS 16 and remove unsafe URL force-unwrapping (#86).\n- Safely omit App Store viewing/sharing controls when a valid store link cannot be constructed.\n- Group date-range fields, query/cancel/clear actions and status in one panel, with aligned controls, consistent spacing and an adaptive accessibility layout (#87). Existing query behavior is unchanged.\n- iOS / iPadOS 16 and later remain supported, subject to each feature's requirements.\n\nBoth packages are unsigned: the standard package includes Live Activities/widgets and needs two App IDs; lite has no extension and needs one. Sign with your own tool before installing.\n\n更早版本的更新内容见 [Releases](https://github.com/mengangs/ipadn/releases)。\n\n两个安装包：`iPadn-2.1.1-unsigned.ipa` 是标准版（含实时活动和桌面小组件，需要 2 个 App ID）；`iPadn-2.1.1-lite-unsigned.ipa` 是精简版（不含扩展，只需 1 个 App ID），适合 App ID 数量受限的签名方式。\n\n验证：设备 Release 编译与 IPA 检查通过；163 项测试通过，0 项失败，0 项跳过。",
-          "downloadURL": "https://github.com/mengangs/ipadn/releases/download/v2.1.1/iPadn-2.1.1-lite-unsigned.ipa",
-          "size": 48708836,
+          "version": "2.1.3",
+          "date": "2026-11-15T14:54:47Z",
+          "localizedDescription": "## iPadn 2.1.3\n\n本次为修复与体验优化更新，解决关键词搜索时的并发闪退问题，隔离顶部提示动画重绘，并改进 iOS 27 本机配对引导与灵动岛交接体验。安装包未签名，请用自己的工具签名后安装。\n\n### 修复与优化\n\n- **修复关键词搜索闪退与并发竞争**：移除搜索前并发嵌套任务组与超时竞争探测，改为在搜索结果返回后按商店地区顺序核验候选已下架应用（最多 15 项），并在新搜索、取消搜索或关闭开关时显式取消旧核验任务。\n- **隔离全局提示动画并优化切换账号响应**：将顶部提示与撤销横幅拆分为独立视图，避免横幅弹簧动画触发整个标签页层级重绘；切换账号时先让提示横幅开始渲染，再触发地区同步、重新搜索与已购刷新。\n- **优化 iOS 27 本机配对引导与灵动岛提醒**：点按「打开设置」跳转到系统设置时主动释放后台音频并推送第 1 步灵动岛横幅指引，补充锁屏密码验证提示与 11 种语言文案，后台等待状态更新支持按代数及时取消，避免旧状态阻塞新提醒。\n- 继续支持 iOS / iPadOS 16 及更新版本，各功能保留各自系统版本要求。\n\n### 两个安装包\n\n- `iPadn-2.1.3-unsigned.ipa`：标准版，含实时活动和小组件，签名需要 2 个 App ID。\n- `iPadn-2.1.3-lite-unsigned.ipa`：精简版，不含扩展，只需 1 个 App ID；不提供实时活动或小组件，其他功能相同。\n- SideStore、AltStore、Feather 等签名工具可添加源：`https://raw.githubusercontent.com/mengangs/ipadn/main/altstore-source.json`。\n\n### English\n\nThis maintenance release fixes a concurrency crash during keyword search, isolates top notice banner animations, and polishes iOS 27 on-device pairing guidance and Live Activity handoff.\n\n- **Fix keyword-search crash & concurrency race**: Remove nested concurrent task-group pre-probes during keyword search; verify up to 15 candidate delisted apps sequentially after search results arrive and cancel stale verification tasks on new searches, cancellation or setting toggles.\n- **Isolate notice overlay & smooth account switching**: Extract the top notice/undo banner into its own view so notice spring animations do not re-evaluate the entire tab hierarchy, and let the switched-account banner begin rendering before triggering region sync, search and purchase refresh.\n- **Polish iOS 27 on-device pairing & Live Activity handoff**: Pause background keep-alive and push a Step 1 Dynamic Island guidance banner when opening Settings, clarify `< Settings` navigation and passcode-prompt instructions across all 11 languages, and cancel superseded Live Activity background waits promptly.\n- iOS / iPadOS 16 and later remain supported, subject to each feature's requirements.\n\nBoth packages are unsigned: the standard package includes Live Activities/widgets and needs two App IDs; lite has no extension and needs one. Sign with your own tool before installing.\n\n更早版本的更新内容见 [Releases](https://github.com/mengangs/ipadn/releases)。\n\n两个安装包：`iPadn-2.1.3-unsigned.ipa` 是标准版（含实时活动和桌面小组件，需要 2 个 App ID）；`iPadn-2.1.3-lite-unsigned.ipa` 是精简版（不含扩展，只需 1 个 App ID），适合 App ID 数量受限的签名方式。\n\n验证：设备 Release 编译与 IPA 检查通过；257 项测试通过，0 项失败，1 项跳过。",
+          "downloadURL": "https://github.com/mengangs/ipadn/releases/download/v2.1.3/iPadn-2.1.3-lite-unsigned.ipa",
+          "size": 49310532,
           "minOSVersion": "17.0"
         }
       ],
-      "version": "2.1.1",
-      "versionDate": "2026-11-14T05:53:21Z",
-      "downloadURL": "https://github.com/mengangs/ipadn/releases/download/v2.1.1/iPadn-2.1.1-lite-unsigned.ipa",
-      "size": 48708836,
-      "versionDescription": "## iPadn 2.1.1\n\n本次为修复与布局优化更新，包含 iOS 16 安装设置崩溃修复和历史版本日期范围筛选排版改进。安装包未签名，请用自己的工具签名后安装。\n\n### 修复与优化\n\n- **修复 iOS 16 打开安装设置时崩溃**：对安装帮助链接的中文片段进行显式编码，并避免无效 URL 的强制解包。感谢 #86 的贡献。\n- **完善商店链接容错**：应用详情无法构造有效 App Store 链接时，不再强制解包或显示不可用的查看/分享入口。\n- **优化历史版本日期筛选面板**：将起止日期、查询/取消/清除按钮与状态提示集中展示，统一日期控件对齐和布局间距，并适配无障碍大字体。保留原有日期查询、取消与清除行为。详见 #87。\n- 继续支持 iOS / iPadOS 16 及更新版本，各功能保留各自系统版本要求。\n\n### 两个安装包\n\n- `iPadn-2.1.1-unsigned.ipa`：标准版，含实时活动和小组件，签名需要 2 个 App ID。\n- `iPadn-2.1.1-lite-unsigned.ipa`：精简版，不含扩展，只需 1 个 App ID；不提供实时活动或小组件，其他功能相同。\n- SideStore、AltStore、Feather 等签名工具可添加源：`https://raw.githubusercontent.com/mengangs/ipadn/main/altstore-source.json`。\n\n### English\n\nThis maintenance update fixes a crash when opening Installation settings on iOS 16 and improves the version-history date-range filter layout.\n\n- Encode the installation-help URL fragment explicitly for iOS 16 and remove unsafe URL force-unwrapping (#86).\n- Safely omit App Store viewing/sharing controls when a valid store link cannot be constructed.\n- Group date-range fields, query/cancel/clear actions and status in one panel, with aligned controls, consistent spacing and an adaptive accessibility layout (#87). Existing query behavior is unchanged.\n- iOS / iPadOS 16 and later remain supported, subject to each feature's requirements.\n\nBoth packages are unsigned: the standard package includes Live Activities/widgets and needs two App IDs; lite has no extension and needs one. Sign with your own tool before installing.\n\n更早版本的更新内容见 [Releases](https://github.com/mengangs/ipadn/releases)。\n\n两个安装包：`iPadn-2.1.1-unsigned.ipa` 是标准版（含实时活动和桌面小组件，需要 2 个 App ID）；`iPadn-2.1.1-lite-unsigned.ipa` 是精简版（不含扩展，只需 1 个 App ID），适合 App ID 数量受限的签名方式。\n\n验证：设备 Release 编译与 IPA 检查通过；163 项测试通过，0 项失败，0 项跳过。",
+      "version": "2.1.3",
+      "versionDate": "2026-11-15T14:54:47Z",
+      "downloadURL": "https://github.com/mengangs/ipadn/releases/download/v2.1.3/iPadn-2.1.3-lite-unsigned.ipa",
+      "size": 49310532,
+      "versionDescription": "## iPadn 2.1.3\n\n本次为修复与体验优化更新，解决关键词搜索时的并发闪退问题，隔离顶部提示动画重绘，并改进 iOS 27 本机配对引导与灵动岛交接体验。安装包未签名，请用自己的工具签名后安装。\n\n### 修复与优化\n\n- **修复关键词搜索闪退与并发竞争**：移除搜索前并发嵌套任务组与超时竞争探测，改为在搜索结果返回后按商店地区顺序核验候选已下架应用（最多 15 项），并在新搜索、取消搜索或关闭开关时显式取消旧核验任务。\n- **隔离全局提示动画并优化切换账号响应**：将顶部提示与撤销横幅拆分为独立视图，避免横幅弹簧动画触发整个标签页层级重绘；切换账号时先让提示横幅开始渲染，再触发地区同步、重新搜索与已购刷新。\n- **优化 iOS 27 本机配对引导与灵动岛提醒**：点按「打开设置」跳转到系统设置时主动释放后台音频并推送第 1 步灵动岛横幅指引，补充锁屏密码验证提示与 11 种语言文案，后台等待状态更新支持按代数及时取消，避免旧状态阻塞新提醒。\n- 继续支持 iOS / iPadOS 16 及更新版本，各功能保留各自系统版本要求。\n\n### 两个安装包\n\n- `iPadn-2.1.3-unsigned.ipa`：标准版，含实时活动和小组件，签名需要 2 个 App ID。\n- `iPadn-2.1.3-lite-unsigned.ipa`：精简版，不含扩展，只需 1 个 App ID；不提供实时活动或小组件，其他功能相同。\n- SideStore、AltStore、Feather 等签名工具可添加源：`https://raw.githubusercontent.com/mengangs/ipadn/main/altstore-source.json`。\n\n### English\n\nThis maintenance release fixes a concurrency crash during keyword search, isolates top notice banner animations, and polishes iOS 27 on-device pairing guidance and Live Activity handoff.\n\n- **Fix keyword-search crash & concurrency race**: Remove nested concurrent task-group pre-probes during keyword search; verify up to 15 candidate delisted apps sequentially after search results arrive and cancel stale verification tasks on new searches, cancellation or setting toggles.\n- **Isolate notice overlay & smooth account switching**: Extract the top notice/undo banner into its own view so notice spring animations do not re-evaluate the entire tab hierarchy, and let the switched-account banner begin rendering before triggering region sync, search and purchase refresh.\n- **Polish iOS 27 on-device pairing & Live Activity handoff**: Pause background keep-alive and push a Step 1 Dynamic Island guidance banner when opening Settings, clarify `< Settings` navigation and passcode-prompt instructions across all 11 languages, and cancel superseded Live Activity background waits promptly.\n- iOS / iPadOS 16 and later remain supported, subject to each feature's requirements.\n\nBoth packages are unsigned: the standard package includes Live Activities/widgets and needs two App IDs; lite has no extension and needs one. Sign with your own tool before installing.\n\n更早版本的更新内容见 [Releases](https://github.com/mengangs/ipadn/releases)。\n\n两个安装包：`iPadn-2.1.3-unsigned.ipa` 是标准版（含实时活动和桌面小组件，需要 2 个 App ID）；`iPadn-2.1.3-lite-unsigned.ipa` 是精简版（不含扩展，只需 1 个 App ID），适合 App ID 数量受限的签名方式。\n\n验证：设备 Release 编译与 IPA 检查通过；257 项测试通过，0 项失败，1 项跳过。",
       "minOSVersion": "17.0"
     },
     {
@@ -955,11 +955,11 @@
       "tintColor": "#0784FC",
       "versions": [
         {
-          "version": "3.8.13",
-          "date": "2026-11-08T09:11:51Z",
-          "localizedDescription": "**Commit:** [9d6ea09b05afa2c8fc537c372795a294db631311](https://github.com/LiveContainer/LiveContainer/commit/9d6ea09b05afa2c8fc537c372795a294db631311)\n**Message:** Support for built-in jit enablers, ram donors, helper process etc\n\nThis is a nightly release [created automatically with GitHub Actions workflow](https://github.com/LiveContainer/LiveContainer/actions/runs/42464599105/attempts/2).",
+          "version": "3.8.14",
+          "date": "2026-11-15T14:10:09Z",
+          "localizedDescription": "**Commit:** [b7cfda60c39933a94d616f2a358ac2e48fd4e5cd](https://github.com/LiveContainer/LiveContainer/commit/b7cfda60c39933a94d616f2a358ac2e48fd4e5cd)\n**Message:** don't load source until source view is opened, implement #1726, bump version\n\nThis is a nightly release [created automatically with GitHub Actions workflow](https://github.com/LiveContainer/LiveContainer/actions/runs/43722603537/attempts/1).",
           "downloadURL": "https://github.com/LiveContainer/LiveContainer/releases/download/nightly/LiveContainer%2BSideStore.ipa",
-          "size": 23752778,
+          "size": 23754976,
           "minOSVersion": "15.0"
         },
         {
@@ -971,11 +971,11 @@
           "minOSVersion": "15.0"
         }
       ],
-      "version": "3.8.13",
-      "versionDate": "2026-11-08T09:11:51Z",
+      "version": "3.8.14",
+      "versionDate": "2026-11-15T14:10:09Z",
       "downloadURL": "https://github.com/LiveContainer/LiveContainer/releases/download/nightly/LiveContainer%2BSideStore.ipa",
-      "size": 23752778,
-      "versionDescription": "**Commit:** [9d6ea09b05afa2c8fc537c372795a294db631311](https://github.com/LiveContainer/LiveContainer/commit/9d6ea09b05afa2c8fc537c372795a294db631311)\n**Message:** Support for built-in jit enablers, ram donors, helper process etc\n\nThis is a nightly release [created automatically with GitHub Actions workflow](https://github.com/LiveContainer/LiveContainer/actions/runs/42464599105/attempts/2).",
+      "size": 23754976,
+      "versionDescription": "**Commit:** [b7cfda60c39933a94d616f2a358ac2e48fd4e5cd](https://github.com/LiveContainer/LiveContainer/commit/b7cfda60c39933a94d616f2a358ac2e48fd4e5cd)\n**Message:** don't load source until source view is opened, implement #1726, bump version\n\nThis is a nightly release [created automatically with GitHub Actions workflow](https://github.com/LiveContainer/LiveContainer/actions/runs/43722603537/attempts/1).",
       "minOSVersion": "15.0"
     },
     {
@@ -1309,6 +1309,34 @@
       "size": 6685919,
       "versionDescription": "**New**\n\n- Hold anywhere on the video to seek ([#116](https://github.com/verback2308/Opaline/issues/116)). Press and hold on the picture, then drag sideways. The seek bar follows your finger and the video jumps where you let go, so you no longer have to hit the thin bar at the bottom. The taps you already know still work: the sides seek, the middle pauses.\n- Search inside a channel ([#117](https://github.com/verback2308/Opaline/issues/117)). Channel pages have a magnifier now, and whatever you type there searches that channel only. YouTube serves no filters for this kind of search, so there are none in the app either.\n- Get a downloaded video out of the app ([#115](https://github.com/verback2308/Opaline/issues/115)). The menu on a downloaded video has a new \"Save to Files\" row that hands the file to the usual iOS share sheet, so it can go to Files, Photos, AirDrop or another app. It is named after the video, and only the video leaves: subtitles, comments and the saved page stay where they were.\n- Clear the whole search history at once ([#121](https://github.com/verback2308/Opaline/issues/121)). The last row under Recent searches wipes the list, and it asks first.\n\n**Fixes**\n\n- The mini player no longer sits on top of the tab bar ([#118](https://github.com/verback2308/Opaline/issues/118)). Tapping a tab behind the collapsed player switches to that tab instead of reopening the video.\n- Stereo no longer gets spatialized on AirPods ([#119](https://github.com/verback2308/Opaline/issues/119)). Ordinary two-channel sound was being turned into a fake surround field that moved when you turned your head. Video that really is multichannel still spatializes.\n- The \"...\" menu stops closing on its own ([#128](https://github.com/verback2308/Opaline/issues/128)). It was reacting to the device being tilted or put down, which made it look random when you held the phone in your hand.\n\n**Also**\n\n- If your device is older than Opaline supports, the README now points at [a downport for iOS 9](https://github.com/Joeviocoe/Opaline) by another developer, which runs on the iPad 2, iPad 3, iPad mini and iPhone 4S ([#125](https://github.com/verback2308/Opaline/issues/125)).",
       "minOSVersion": "12.0"
+    },
+    {
+      "name": "Open Screen Sharing",
+      "bundleIdentifier": "io.nekohasekai.screensharing",
+      "developerName": "nekohasekai",
+      "subtitle": "Remote desktop client optimized for Mac screen sharing",
+      "localizedDescription": "Open Screen Sharing is a free and open-source remote desktop client optimized for Mac screen sharing and public networks, while also offering first-class support for standard VNC and RDP.",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/OpenScreenSharing/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/OpenScreenSharing/images/session.png"
+      ],
+      "tintColor": "#1060F0",
+      "versions": [
+        {
+          "version": "1.0.6",
+          "date": "2026-11-07T07:10:23Z",
+          "localizedDescription": "* Add native touch support for Mac\r\n* Add Quick Input\r\n* Keep the Mac awake\r\n* Allow signing in with another connection's credentials\r\n* Fixes and improvements",
+          "downloadURL": "https://github.com/nekohasekai/open-screen-sharing/releases/download/v1.0.6/OpenScreenSharing.ipa",
+          "size": 13714353,
+          "minOSVersion": "15.0"
+        }
+      ],
+      "version": "1.0.6",
+      "versionDate": "2026-11-07T07:10:23Z",
+      "downloadURL": "https://github.com/nekohasekai/open-screen-sharing/releases/download/v1.0.6/OpenScreenSharing.ipa",
+      "size": 13714353,
+      "versionDescription": "* Add native touch support for Mac\r\n* Add Quick Input\r\n* Keep the Mac awake\r\n* Allow signing in with another connection's credentials\r\n* Fixes and improvements",
+      "minOSVersion": "15.0"
     },
     {
       "name": "OpenParsec",
@@ -1920,19 +1948,19 @@
       "tintColor": "#1E8FC7",
       "versions": [
         {
-          "version": "0.9.8",
-          "date": "2026-11-14T18:14:23Z",
-          "localizedDescription": "> **Requires:** iOS 27, or iOS 26.0 – 26.7.2. Tested on iOS 27.0.1, 27.2.1, 26.7.1 and the 27.3 beta (confirmed by a user).\n> **Needs:** a sideloading tool that keeps the App Group entitlement; see [Signing](https://github.com/kolbicz/WQFiles#signing-the-app-group) in the README.\n\n# Worse Query Files 0.9.8\n\n## New\n\n- **Reset Access Cache in Settings:** under **Settings → Troubleshooting**, in both designs. Until now it only appeared on the startup check screen when sandbox access failed, so it couldn't be reached after **Continue Anyway** or when access broke later. It puts WQ Files' own cache folder in the App Group back; nothing is deleted.\n\n## Changed\n\n- **Clearer Log when access is blocked:** when the access cache can't be repaired automatically, the Log now says why and what it found (swap marker, preserved Caches folder, what Caches is now) and points to **Reset Access Cache**. The same failure is logged once instead of for every folder.\n- **Translations** for the new texts in all languages.\n\n## Credit\n\nNew design: GpGp700. Sandbox technique: [worse_query](https://github.com/forcequitOS/worse_query) by Taj C (forcequit). Container enumeration: [KAMUI](https://github.com/murk-sus/kamui-escape) by murk-sus. Translations: iosrxwy (Simplified Chinese), hfip (Arabic), hooray804 (Korean), Reinascape (Russian), buraakkcayir (Turkish review). Thanks to everyone who sent Logs and ideas. GPL-3.0-or-later.\n\nSHA-256 of WQFiles.ipa: `7459ded30f5aa740a49060e1497ddf7eafa7b0152290b8104d336338de9a050c`",
-          "downloadURL": "https://github.com/kolbicz/WQFiles/releases/download/v0.9.8/WQFiles.ipa",
-          "size": 817121,
+          "version": "0.9.9",
+          "date": "2026-11-15T14:08:50Z",
+          "localizedDescription": "> **Requires:** iOS 27, or iOS 26.0 – 26.7.2. Tested on iOS 27.0.1, 27.2.1, 26.7.1 and the 27.3 beta (confirmed by a user); see [Tested devices](https://github.com/kolbicz/WQFiles#tested-devices).\n> **Needs:** a sideloading tool that keeps the App Group entitlement; see [Signing](https://github.com/kolbicz/WQFiles#signing-the-app-group) in the README.\n\n# Worse Query Files 0.9.9\n\n## New\n\n- **Plain Background** ([#56](https://github.com/kolbicz/WQFiles/issues/56)): **Settings → Plain Background** replaces the colored backdrop of the new design with plain black (white in light mode). It applies right away.\n- **Dark and tinted app icon** ([#47](https://github.com/kolbicz/WQFiles/issues/47)): the WQ Files icon now has its own dark and tinted versions for the iOS 18+ Home Screen styles.\n\n## Fixes\n\n- **App Groups show their names on iOS 27.2 and later** ([#59](https://github.com/kolbicz/WQFiles/pull/59)): some or all App Groups showed only a UUID, because iOS 27.2 removed the attribute WQ Files read the name from. WQ Files now reads its replacement and, as a second source, the group ids in each app's record in the LaunchServices database. Both give exact names, no guessing.\n- **App Group icons:** groups such as `group.net.whatsapp.WhatsApp.shared` now look up the icon of the app inside the id (`net.whatsapp.WhatsApp`) instead of ids that are never apps.\n- **Files you can't open are dimmed** ([#57](https://github.com/kolbicz/WQFiles/issues/57)): files and folders whose owner and permissions keep WQ Files out (usually root-only) are shown dimmed with a lock and \"No access\". Tapping one explains who owns it instead of opening an empty viewer.\n- **iOS 18 and older** ([#58](https://github.com/kolbicz/WQFiles/issues/58)): some sideloading tools install WQ Files there despite the iOS 26 minimum. It now shows a notice that it needs iOS 26 or 27 (and points to Cyanide for iOS 17 and 18) instead of scanning for minutes and failing.\n\n## Changed\n\n- **Translations** for the new texts in all languages.\n\n## Credit\n\nNew design: GpGp700. Sandbox technique: [worse_query](https://github.com/forcequitOS/worse_query) by Taj C (forcequit). Container enumeration: [KAMUI](https://github.com/murk-sus/kamui-escape) by murk-sus. Translations: iosrxwy (Simplified Chinese), hfip (Arabic), hooray804 (Korean), Reinascape (Russian), buraakkcayir (Turkish review). Thanks to VaslD for the App Group report and analysis, and to everyone who sent Logs and ideas. GPL-3.0-or-later.\n\nSHA-256 of WQFiles.ipa: `20f0bf846e018775779e305a5b390f3ac495a42d60ecfdd039823811777a139b`",
+          "downloadURL": "https://github.com/kolbicz/WQFiles/releases/download/v0.9.9/WQFiles.ipa",
+          "size": 1918433,
           "minOSVersion": "26.0"
         }
       ],
-      "version": "0.9.8",
-      "versionDate": "2026-11-14T18:14:23Z",
-      "downloadURL": "https://github.com/kolbicz/WQFiles/releases/download/v0.9.8/WQFiles.ipa",
-      "size": 817121,
-      "versionDescription": "> **Requires:** iOS 27, or iOS 26.0 – 26.7.2. Tested on iOS 27.0.1, 27.2.1, 26.7.1 and the 27.3 beta (confirmed by a user).\n> **Needs:** a sideloading tool that keeps the App Group entitlement; see [Signing](https://github.com/kolbicz/WQFiles#signing-the-app-group) in the README.\n\n# Worse Query Files 0.9.8\n\n## New\n\n- **Reset Access Cache in Settings:** under **Settings → Troubleshooting**, in both designs. Until now it only appeared on the startup check screen when sandbox access failed, so it couldn't be reached after **Continue Anyway** or when access broke later. It puts WQ Files' own cache folder in the App Group back; nothing is deleted.\n\n## Changed\n\n- **Clearer Log when access is blocked:** when the access cache can't be repaired automatically, the Log now says why and what it found (swap marker, preserved Caches folder, what Caches is now) and points to **Reset Access Cache**. The same failure is logged once instead of for every folder.\n- **Translations** for the new texts in all languages.\n\n## Credit\n\nNew design: GpGp700. Sandbox technique: [worse_query](https://github.com/forcequitOS/worse_query) by Taj C (forcequit). Container enumeration: [KAMUI](https://github.com/murk-sus/kamui-escape) by murk-sus. Translations: iosrxwy (Simplified Chinese), hfip (Arabic), hooray804 (Korean), Reinascape (Russian), buraakkcayir (Turkish review). Thanks to everyone who sent Logs and ideas. GPL-3.0-or-later.\n\nSHA-256 of WQFiles.ipa: `7459ded30f5aa740a49060e1497ddf7eafa7b0152290b8104d336338de9a050c`",
+      "version": "0.9.9",
+      "versionDate": "2026-11-15T14:08:50Z",
+      "downloadURL": "https://github.com/kolbicz/WQFiles/releases/download/v0.9.9/WQFiles.ipa",
+      "size": 1918433,
+      "versionDescription": "> **Requires:** iOS 27, or iOS 26.0 – 26.7.2. Tested on iOS 27.0.1, 27.2.1, 26.7.1 and the 27.3 beta (confirmed by a user); see [Tested devices](https://github.com/kolbicz/WQFiles#tested-devices).\n> **Needs:** a sideloading tool that keeps the App Group entitlement; see [Signing](https://github.com/kolbicz/WQFiles#signing-the-app-group) in the README.\n\n# Worse Query Files 0.9.9\n\n## New\n\n- **Plain Background** ([#56](https://github.com/kolbicz/WQFiles/issues/56)): **Settings → Plain Background** replaces the colored backdrop of the new design with plain black (white in light mode). It applies right away.\n- **Dark and tinted app icon** ([#47](https://github.com/kolbicz/WQFiles/issues/47)): the WQ Files icon now has its own dark and tinted versions for the iOS 18+ Home Screen styles.\n\n## Fixes\n\n- **App Groups show their names on iOS 27.2 and later** ([#59](https://github.com/kolbicz/WQFiles/pull/59)): some or all App Groups showed only a UUID, because iOS 27.2 removed the attribute WQ Files read the name from. WQ Files now reads its replacement and, as a second source, the group ids in each app's record in the LaunchServices database. Both give exact names, no guessing.\n- **App Group icons:** groups such as `group.net.whatsapp.WhatsApp.shared` now look up the icon of the app inside the id (`net.whatsapp.WhatsApp`) instead of ids that are never apps.\n- **Files you can't open are dimmed** ([#57](https://github.com/kolbicz/WQFiles/issues/57)): files and folders whose owner and permissions keep WQ Files out (usually root-only) are shown dimmed with a lock and \"No access\". Tapping one explains who owns it instead of opening an empty viewer.\n- **iOS 18 and older** ([#58](https://github.com/kolbicz/WQFiles/issues/58)): some sideloading tools install WQ Files there despite the iOS 26 minimum. It now shows a notice that it needs iOS 26 or 27 (and points to Cyanide for iOS 17 and 18) instead of scanning for minutes and failing.\n\n## Changed\n\n- **Translations** for the new texts in all languages.\n\n## Credit\n\nNew design: GpGp700. Sandbox technique: [worse_query](https://github.com/forcequitOS/worse_query) by Taj C (forcequit). Container enumeration: [KAMUI](https://github.com/murk-sus/kamui-escape) by murk-sus. Translations: iosrxwy (Simplified Chinese), hfip (Arabic), hooray804 (Korean), Reinascape (Russian), buraakkcayir (Turkish review). Thanks to VaslD for the App Group report and analysis, and to everyone who sent Logs and ideas. GPL-3.0-or-later.\n\nSHA-256 of WQFiles.ipa: `20f0bf846e018775779e305a5b390f3ac495a42d60ecfdd039823811777a139b`",
       "minOSVersion": "26.0"
     },
     {
@@ -2059,15 +2087,48 @@
   ],
   "news": [
     {
+      "appID": "app.local.iPadn",
+      "title": "iPadn 2.1.3 · 15 Nov 2026",
+      "identifier": "iPadn-release-v2.1.3",
+      "caption": "iPadn 2.1.3 is available.",
+      "date": "2026-11-15T14:54:47Z",
+      "tintColor": "#111111",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iPadn/images/news.png",
+      "notify": true,
+      "url": "https://github.com/mengangs/ipadn/releases/tag/v2.1.3"
+    },
+    {
+      "appID": "com.kdt.livecontainer",
+      "title": "LiveContainer+SideStore 3.8.14 · 15 Nov 2026",
+      "identifier": "LiveContainer+SideStore-release-nightly",
+      "caption": "LiveContainer+SideStore 3.8.14 is available.",
+      "date": "2026-11-15T14:10:09Z",
+      "tintColor": "#0784FC",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/master/apps/LiveContainer+SideStore/images/news.png",
+      "notify": true,
+      "url": "https://github.com/LiveContainer/LiveContainer/releases/tag/nightly"
+    },
+    {
       "appID": "cz.kolbi.wqfiles",
-      "title": "WQ Files 0.9.8 · 14 Nov 2026",
-      "identifier": "WQ Files-release-v0.9.8",
-      "caption": "WQ Files 0.9.8 is available.",
-      "date": "2026-11-14T18:14:23Z",
+      "title": "WQ Files 0.9.9 · 15 Nov 2026",
+      "identifier": "WQ Files-release-v0.9.9",
+      "caption": "WQ Files 0.9.9 is available.",
+      "date": "2026-11-15T14:08:50Z",
       "tintColor": "#1E8FC7",
       "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WQFiles/images/news.png",
       "notify": true,
-      "url": "https://github.com/kolbicz/WQFiles/releases/tag/v0.9.8"
+      "url": "https://github.com/kolbicz/WQFiles/releases/tag/v0.9.9"
+    },
+    {
+      "appID": "com.naine.doer",
+      "title": "Doer 1.8.7 · 15 Nov 2026",
+      "identifier": "Doer-release-v1.8.7",
+      "caption": "Doer 1.8.7 is available.",
+      "date": "2026-11-15T13:11:40Z",
+      "tintColor": "#4080E0",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Doer/images/news.png",
+      "notify": true,
+      "url": "https://github.com/moliango/doer/releases/tag/v1.8.7"
     },
     {
       "appID": "com.kodjodevf.mangayomi",
@@ -2145,17 +2206,6 @@
       "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/BCD/images/news.png",
       "notify": true,
       "url": "https://github.com/thebcd69/bcd-games/releases/tag/v0.1.659"
-    },
-    {
-      "appID": "app.local.iPadn",
-      "title": "iPadn 2.1.1 · 14 Nov 2026",
-      "identifier": "iPadn-release-v2.1.1",
-      "caption": "iPadn 2.1.1 is available.",
-      "date": "2026-11-14T05:53:21Z",
-      "tintColor": "#111111",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iPadn/images/news.png",
-      "notify": true,
-      "url": "https://github.com/mengangs/ipadn/releases/tag/v2.1.1"
     },
     {
       "appID": "io.nekohasekai.swipt",
@@ -2334,17 +2384,6 @@
       "url": "https://github.com/mrdrvt99/YouProEXTRA/releases/tag/youproextra-ipa2"
     },
     {
-      "appID": "com.kdt.livecontainer",
-      "title": "LiveContainer+SideStore 3.8.13 · 08 Nov 2026",
-      "identifier": "LiveContainer+SideStore-release-nightly",
-      "caption": "LiveContainer+SideStore 3.8.13 is available.",
-      "date": "2026-11-08T09:11:51Z",
-      "tintColor": "#0784FC",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/master/apps/LiveContainer+SideStore/images/news.png",
-      "notify": true,
-      "url": "https://github.com/LiveContainer/LiveContainer/releases/tag/nightly"
-    },
-    {
       "appID": "com.llayerlinux.LSX4RuntimeProbe",
       "title": "LSX4 128.9934 · 08 Nov 2026",
       "identifier": "LSX4-release-ios-jit-128.9934",
@@ -2387,6 +2426,17 @@
       "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MiniWatts/images/news.png",
       "notify": true,
       "url": "https://github.com/ResistanceTo/MiniWatts/releases/tag/v1.7.0"
+    },
+    {
+      "appID": "io.nekohasekai.screensharing",
+      "title": "Open Screen Sharing 1.0.6 · 07 Nov 2026",
+      "identifier": "Open Screen Sharing-release-v1.0.6",
+      "caption": "Open Screen Sharing 1.0.6 is available.",
+      "date": "2026-11-07T07:10:23Z",
+      "tintColor": "#1060F0",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/OpenScreenSharing/images/news.png",
+      "notify": true,
+      "url": "https://github.com/nekohasekai/open-screen-sharing/releases/tag/v1.0.6"
     },
     {
       "appID": "com.huamu013.ZhihuMinusMinus",
@@ -2596,17 +2646,6 @@
       "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Aidoku/images/news.png",
       "notify": true,
       "url": "https://github.com/Aidoku/Aidoku/releases/tag/v0.9-4"
-    },
-    {
-      "appID": "com.naine.doer",
-      "title": "Doer 1.8.6 · 10 Oct 2026",
-      "identifier": "Doer-release-v1.8.6",
-      "caption": "Doer 1.8.6 is available.",
-      "date": "2026-10-10T08:03:04Z",
-      "tintColor": "#4080E0",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Doer/images/news.png",
-      "notify": true,
-      "url": "https://github.com/moliango/doer/releases/tag/v1.8.6"
     },
     {
       "appID": "dev.infinityf4p.tiebapure",
