@@ -15,7 +15,7 @@ https://raw.githubusercontent.com/andykeppel/AltGallery-LBox/main/altgallery-lbo
 ## 自动更新
 
 - 上游：https://raw.githubusercontent.com/bebound/AltGallery/master/all-apps.json
-- GitHub Actions 每 6 小时运行一次，计划时间为北京时间 02:17、08:17、14:17、20:17；实际执行可能延迟。
+- GitHub Actions 每隔一个日历日北京时间凌晨 04:00 运行一次（UTC 20:00，Cron：`0 20 */2 * *`，按每月 1、3、5……日执行）；月末附近的间隔可能变化，实际启动也可能延迟。
 - 也可以进入 Actions → Update AltGallery LBox source → Run workflow 手动更新。
 - 仅在内容发生变化时提交；获取或校验失败时保留上一份源。
 - GitHub 可能暂停连续 60 天无仓库活动的公开仓库定时工作流；如停止更新，在 Actions 中重新启用。
